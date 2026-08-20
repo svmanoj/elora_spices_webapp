@@ -1,1 +1,34 @@
 /* Design tokens: brand colors, spacing, type scale, and other CSS custom properties. */
+/* Confirmed brand tokens from the Apzara PRD — do not change hex values without checking the source doc. */
+
+:root {
+  /* Palette: Emerald Green — nav, buttons, headings */
+  --color-primary: #0B6B4A;
+  /* Palette: Deep Forest Green — footer, dark sections */
+  --color-primary-dark: #064E3B;
+  /* Palette: Light White — base background */
+  --color-bg: #F8FAF7;
+  /* Palette: Pure White — cards, nav bg */
+  --color-surface: #FFFFFF;
+  /* Palette: Soft Natural Green — product section bg */
+  --color-highlight: #DDEFE6;
+  /* Palette: Earth Gold — sparing use only */
+  --color-accent: #C9A227;
+
+  /* Spacing scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 64px;
+
+  /* Fonts */
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", -apple-system, sans-serif;
+  --font-accent: "Lora", Georgia, serif;
+
+  /* Shared card chrome */
+  --radius-md: 8px;
+  --shadow-card: 0 4px 16px rgba(6, 78, 59, 0.08);
+}

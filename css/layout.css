@@ -1,1 +1,66 @@
 /* Layout: page landmarks, section structure, and grid/flex containers. */
+
+/*
+  Breakpoint strategy (mobile-first):
+  - Mobile:  base styles, < 768px
+  - Tablet:  @media (min-width: 768px)  — 768px–1024px
+  - Desktop: @media (min-width: 1025px) — > 1024px
+
+  Write mobile layout first. Layer tablet, then desktop, with min-width queries only.
+  Do not use max-width queries or !important.
+*/
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-block: var(--space-sm);
+  padding-inline: var(--space-md);
+  background-color: var(--color-surface);
+}
+
+.nav__logo {
+  flex-shrink: 0;
+}
+
+.nav__links {
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--space-lg);
+  }
+
+  .nav {
+    padding-inline: var(--space-lg);
+  }
+
+  .nav__links {
+    display: flex;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    padding-inline: var(--space-xl);
+  }
+
+  .nav {
+    padding-inline: var(--space-xl);
+  }
+}

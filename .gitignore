@@ -1,10 +1,6 @@
 .DS_Store
 Thumbs.db
-.idea/
 .vscode/
-*.log
-.env
-.env.*
+.idea/
 node_modules/
-dist/
-.cache/
+.netlify/

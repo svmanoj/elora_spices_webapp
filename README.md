@@ -1,8 +1,12 @@
 # Elora Spices — Website
 
-Single-page static site for Elora Spices (Phase 1 / MVP). HTML5, CSS3, and vanilla JavaScript — no frameworks.
+Single-page static site for Elora Spices: a modern farm-to-home spice brand.
 
-## Structure
+## Tech stack
+
+HTML5, CSS3, and vanilla JavaScript (ES modules). No frameworks, no bundler.
+
+## Folder structure
 
 ```
 elora-spices-website/
@@ -28,20 +32,16 @@ elora-spices-website/
 └── .gitignore
 ```
 
-## Local preview
+## Architecture
 
-Open `index.html` via a local static server so ES modules load correctly (file:// will often block them).
+**CSS load order** (linked in `index.html` in this sequence — later files may override earlier ones):
 
-```bash
-npx serve .
-```
+1. `tokens.css` — brand custom properties (palette, spacing, type, radius, shadow)
+2. `base.css` — reset, element defaults, document typography
+3. `layout.css` — page structure, container, sticky nav, breakpoints
+4. `components.css` — reusable UI blocks
+5. `animations.css` — keyframes, transitions, motion
 
-Then visit the URL printed in the terminal.
+**JavaScript:** `js/main.js` is the only entry point (`type="module"`, `defer`). It imports each file under `js/modules/` and calls that module's `init()` on `DOMContentLoaded`. Feature modules do not import each other and do not assign to `window`. Init order: nav → hero-carousel → card-flip → scroll-animations → form-handler.
 
-## CSS load order
-
-Stylesheets are linked in this order: `tokens` → `base` → `layout` → `components` → `animations`.
-
-## JavaScript
-
-`js/main.js` is loaded as `type="module"` with `defer`. It imports each feature module and calls `init()` on `DOMContentLoaded`.
+Serve the site over HTTP (for example `npx serve .`) so ES modules load; `file://` often blocks them.
