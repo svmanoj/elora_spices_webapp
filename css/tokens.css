@@ -32,7 +32,7 @@
   --space-5xl: 128px;
 
   /* Section vertical rhythm */
-  --section-pad-y: clamp(64px, 8vw, 120px);
+  --section-pad-y: clamp(40px, 5vw, 64px);
 
   /* Fonts */
   --font-heading: "Playfair Display", Georgia, serif;

@@ -64,7 +64,7 @@
 }
 
 main > section[id] {
-  scroll-margin-top: 64px;
+  scroll-margin-top: 0;
 }
 
 #hero {
