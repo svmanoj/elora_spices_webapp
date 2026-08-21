@@ -794,6 +794,7 @@ main > section[id] {
   font-size: var(--text-2xl);
   text-align: center;
   margin-bottom: var(--space-xl);
+  color: var(--color-surface);
 }
 
 .principles__grid {
@@ -1038,14 +1039,14 @@ main > section[id] {
   gap: var(--space-3xl);
 }
 
-.contact__tabs {
+.contact__categories {
   display: flex;
   gap: var(--space-md);
   margin-bottom: var(--space-xl);
   flex-wrap: wrap;
 }
 
-.contact__tab {
+.contact__category {
   font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -1054,19 +1055,10 @@ main > section[id] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid var(--color-highlight);
+  border: 1.5px solid var(--color-primary);
   border-radius: 100px;
-  color: var(--color-text-muted);
-  transition: all var(--duration-fast) var(--ease-out);
-  touch-action: manipulation;
-  cursor: pointer;
-}
-
-.contact__tab:hover,
-.contact__tab--active {
-  background-color: var(--color-highlight);
   color: var(--color-primary-dark);
-  border-color: var(--color-primary);
+  background-color: var(--color-highlight);
 }
 
 .contact__details {
