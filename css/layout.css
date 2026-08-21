@@ -850,8 +850,8 @@ main > section[id] {
   border-radius: var(--radius-md);
   padding: var(--space-lg);
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-md);
   box-shadow: var(--shadow-card);
   transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
 }
@@ -869,17 +869,21 @@ main > section[id] {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: var(--space-md);
   flex-shrink: 0;
 }
 
 .principle-card__title {
-  font-size: var(--text-base);
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
   font-weight: 700;
+  color: var(--color-primary-dark);
   margin-bottom: var(--space-xs);
 }
 
 .principle-card__text {
   font-size: var(--text-sm);
+  color: var(--color-text-muted);
   line-height: 1.6;
 }
 
