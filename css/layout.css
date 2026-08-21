@@ -63,6 +63,14 @@
   line-height: 1.7;
 }
 
+main > section[id] {
+  scroll-margin-top: 80px;
+}
+
+#hero {
+  scroll-margin-top: 0;
+}
+
 /* ─── Header / Nav ─── */
 
 .site-header {
@@ -209,7 +217,8 @@
   transition: color var(--duration-fast) var(--ease-out);
 }
 
-.mobile-drawer__link:hover {
+.mobile-drawer__link:hover,
+.mobile-drawer__link--active {
   color: var(--color-primary);
 }
 
