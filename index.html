@@ -4,6 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Elora Spices — Nature's Finest, Packed Fresh.</title>
+    <meta name="description" content="Elora Spices brings you naturally cultivated, carefully sourced, and freshly packed agricultural products from South India's finest farms. From farm to your home." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Elora Spices — Nature's Finest, Packed Fresh." />
+    <meta property="og:description" content="Naturally cultivated. Carefully sourced. Freshly packed. Premium agricultural products rooted in responsible cultivation from South India." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eloraspices.com" />
+    <meta property="og:image" content="assets/images/og-image.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Elora Spices — Nature's Finest, Packed Fresh." />
+    <meta name="twitter:description" content="Naturally cultivated. Carefully sourced. Freshly packed. Premium agricultural products from South India." />
+
+    <!-- Favicon placeholder -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,24 +35,914 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:ital,wght@1,400&family=Playfair+Display:wght@400;500;600;700&display=swap"
     />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/phosphor.min.css" />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/tokens.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/animations.css" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Elora Spices",
+      "url": "https://eloraspices.com",
+      "description": "Naturally cultivated, carefully sourced, and freshly packed agricultural products from South India's finest farms.",
+      "foundingDate": "2011",
+      "founders": [
+        { "@type": "Person", "name": "Jeevan", "jobTitle": "Co-Founder, Brand & Business Development" },
+        { "@type": "Person", "name": "Balaji", "jobTitle": "Co-Founder, Quality & Responsible Practices" }
+      ]
+    }
+    </script>
+
     <script type="module" src="js/main.js" defer></script>
   </head>
   <body>
-    <header>
-      <nav aria-label="Primary">
-        <!-- Primary navigation placeholder -->
+
+    <!-- ===================== HEADER / NAV ===================== -->
+    <header class="site-header" id="site-header">
+      <nav class="nav container" aria-label="Primary">
+        <a href="#" class="nav__logo" aria-label="Elora Spices — Home">
+          <!-- Logo placeholder — swap with client SVG -->
+          <svg class="nav__logo-icon" width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="18" fill="var(--color-accent)" opacity="0.15"/>
+            <path d="M20 6 C20 6 12 14 12 22 C12 27 15.5 30 20 30 C24.5 30 28 27 28 22 C28 14 20 6 20 6Z" fill="var(--color-primary)" opacity="0.8"/>
+            <path d="M20 10 C20 10 16 16 16 21 C16 24 17.8 26 20 26 C22.2 26 24 24 24 21 C24 16 20 10 20 10Z" fill="var(--color-accent)" opacity="0.6"/>
+            <line x1="20" y1="18" x2="20" y2="30" stroke="var(--color-primary-dark)" stroke-width="1.5"/>
+          </svg>
+          <span class="nav__logo-text">Elora Spices</span>
+        </a>
+
+        <ul class="nav__links" id="nav-links" role="list">
+          <li><a href="#hero" class="nav__link nav__link--active">Home</a></li>
+          <li><a href="#our-story" class="nav__link">Our Story</a></li>
+          <li><a href="#natural-farming" class="nav__link">Natural Farming</a></li>
+          <li><a href="#products" class="nav__link">Products</a></li>
+          <li><a href="#vision-mission" class="nav__link">Vision &amp; Mission</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+
+        <a href="#contact" class="btn btn--primary nav__cta">Get in Touch</a>
+
+        <button
+          class="nav__hamburger"
+          id="nav-hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+        >
+          <span class="nav__hamburger-line"></span>
+          <span class="nav__hamburger-line"></span>
+          <span class="nav__hamburger-line"></span>
+        </button>
       </nav>
+
+      <!-- Mobile drawer -->
+      <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <ul class="mobile-drawer__links" role="list">
+          <li><a href="#hero" class="mobile-drawer__link">Home</a></li>
+          <li><a href="#our-story" class="mobile-drawer__link">Our Story</a></li>
+          <li><a href="#natural-farming" class="mobile-drawer__link">Natural Farming</a></li>
+          <li><a href="#products" class="mobile-drawer__link">Products</a></li>
+          <li><a href="#vision-mission" class="mobile-drawer__link">Vision &amp; Mission</a></li>
+          <li><a href="#contact" class="mobile-drawer__link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn--primary mobile-drawer__cta">Get in Touch</a>
+      </div>
     </header>
+
     <main>
-      <!-- Page sections placeholder -->
+
+      <!-- ===================== S1: HERO ===================== -->
+      <section class="hero" id="hero" aria-label="Hero">
+        <div class="hero__carousel" id="hero-carousel">
+          <div class="hero__slide hero__slide--active" data-slide="0">
+            <img
+              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80"
+              alt="Lush green farmland stretching to the horizon at sunrise, representing Elora Spices' commitment to natural farming in South India"
+              class="hero__bg"
+              loading="eager"
+            />
+          </div>
+          <div class="hero__slide" data-slide="1">
+            <img
+              src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80"
+              alt="Terraced spice plantations on hillside with morning mist, where Elora sources its naturally cultivated spices"
+              class="hero__bg"
+              loading="eager"
+            />
+          </div>
+          <div class="hero__slide" data-slide="2">
+            <img
+              src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1920&q=80"
+              alt="Golden harvest fields at dawn, symbolising the farm-to-home journey of Elora Spices' agricultural products"
+              class="hero__bg"
+              loading="eager"
+            />
+          </div>
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content container">
+          <span class="hero__badge">● NATURE'S FINEST, PACKED FRESH.</span>
+          <h1 class="hero__title">
+            ELORA <span class="hero__title-accent">SPICES</span><br />
+            <em class="hero__title-italic">From Farm to Your Home.</em>
+          </h1>
+          <p class="hero__subtitle">Naturally cultivated. Carefully sourced. Freshly packed.</p>
+          <p class="hero__description">
+            We believe in farming that works with nature — bringing you premium
+            agricultural products rooted in responsible cultivation and
+            transparent sourcing from South India's finest farms.
+          </p>
+          <div class="hero__actions">
+            <a href="#products" class="btn btn--primary">Explore Our Products</a>
+            <a href="#natural-farming" class="btn btn--outline">Our Natural Farming Story</a>
+          </div>
+          <div class="hero__social-proof">
+            <div class="hero__avatars">
+              <span class="hero__avatar"></span>
+              <span class="hero__avatar"></span>
+              <span class="hero__avatar"></span>
+            </div>
+            <p class="hero__proof-text"><strong>500+</strong> happy customers across India</p>
+          </div>
+        </div>
+        <div class="hero__scroll-hint" aria-hidden="true">
+          <span>SCROLL</span>
+          <svg width="16" height="24" viewBox="0 0 16 24" fill="none"><path d="M8 4v12M3 13l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <!-- "Farm Fresh" floating badge -->
+        <div class="hero__farm-badge" aria-hidden="true">
+          <span class="hero__farm-badge-dot">●</span>
+          <strong>FARM FRESH</strong>
+          <p>Naturally cultivated, packed at source</p>
+        </div>
+      </section>
+
+      <!-- ===================== S2: NATURAL FARMING PHILOSOPHY ===================== -->
+      <section class="natural-farming" id="natural-farming" aria-labelledby="natural-farming-heading">
+        <div class="container">
+          <h2 class="section-heading" id="natural-farming-heading">
+            Rooted in Nature. Grown With Purpose.
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-intro">
+            At Elora Spices, naturally inspired farming isn't a marketing claim — it's the
+            foundation of every decision we make. From soil preparation to final packing, we
+            honour the natural world that makes premium agriculture possible.
+          </p>
+
+          <div class="natural-farming__grid">
+            <div class="natural-farming__image-col">
+              <img
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80"
+                alt="Sunlit farmlands in South India where Elora Spices sources its naturally cultivated produce"
+                class="natural-farming__photo"
+                loading="lazy"
+              />
+              <div class="natural-farming__stat">
+                <span class="natural-farming__stat-number">15<sup>+</sup></span>
+                <span class="natural-farming__stat-label">YEARS OF NATURAL FARMING</span>
+              </div>
+            </div>
+
+            <div class="natural-farming__cards-col">
+              <article class="philosophy-card">
+                <div class="philosophy-card__icon">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M14 3C14 3 6 11 6 17c0 4.4 3.6 8 8 8s8-3.6 8-8c0-6-8-14-8-14z" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/><path d="M14 11v10M11 18h6" stroke="var(--color-primary)" stroke-width="1.5"/></svg>
+                </div>
+                <h3 class="philosophy-card__title">Natural Cultivation</h3>
+                <p class="philosophy-card__text">
+                  We farm in harmony with natural ecosystems — working with the land
+                  rather than against it. Our cultivation practices respect the rhythms of
+                  nature, resulting in products with genuine character and integrity.
+                </p>
+              </article>
+
+              <article class="philosophy-card">
+                <div class="philosophy-card__icon">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><circle cx="14" cy="14" r="10" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/><path d="M14 8v6l4 2" stroke="var(--color-primary)" stroke-width="1.5"/></svg>
+                </div>
+                <h3 class="philosophy-card__title">Respect for the Soil</h3>
+                <p class="philosophy-card__text">
+                  Healthy soil produces healthy crops. We support agricultural practices
+                  that nurture soil biodiversity, maintain natural fertility, and build long-term
+                  resilience — ensuring every harvest is as good as the last.
+                </p>
+              </article>
+
+              <article class="philosophy-card">
+                <div class="philosophy-card__icon">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="3" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/><circle cx="18" cy="10" r="3" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/><path d="M6 20c0-3 2.7-5 8-5s8 2 8 5" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/></svg>
+                </div>
+                <h3 class="philosophy-card__title">Farmer First</h3>
+                <p class="philosophy-card__text">
+                  Behind every product is a farming family. We build long-term,
+                  meaningful relationships with our growers — ensuring fair value,
+                  knowledge exchange, and a shared commitment to naturally inspired
+                  farming.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== S3: FARM-TO-PACK JOURNEY ===================== -->
+      <section class="journey" id="journey" aria-labelledby="journey-heading">
+        <div class="container">
+          <span class="section-label">OUR PROCESS</span>
+          <h2 class="section-heading" id="journey-heading">
+            From Farm to Your Home
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-intro">
+            Every step of our journey is intentional. Transparent. Rooted in respect for the
+            land and the people who work it.
+          </p>
+
+          <ol class="journey__steps" role="list">
+            <li class="journey__step">
+              <div class="journey__step-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4C16 4 8 12 8 20c0 4 3 7 8 7s8-3 8-7c0-8-8-16-8-16z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+              </div>
+              <span class="journey__step-number">01</span>
+              <h3 class="journey__step-title">Cultivate</h3>
+              <p class="journey__step-text">
+                Seeds selected for their natural character, grown in soil nurtured
+                through responsible agricultural practices.
+              </p>
+            </li>
+            <li class="journey__step">
+              <div class="journey__step-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="6" y="10" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 10V8a6 6 0 0112 0v2" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <span class="journey__step-number">02</span>
+              <h3 class="journey__step-title">Harvest</h3>
+              <p class="journey__step-text">
+                Hand-picked at peak ripeness by experienced farmers who know
+                exactly when each crop is ready.
+              </p>
+            </li>
+            <li class="journey__step">
+              <div class="journey__step-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M12 16l3 3 5-6" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <span class="journey__step-number">03</span>
+              <h3 class="journey__step-title">Select</h3>
+              <p class="journey__step-text">
+                Every batch is carefully sorted and inspected — only products meeting
+                our quality standards move forward.
+              </p>
+            </li>
+            <li class="journey__step">
+              <div class="journey__step-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="7" y="7" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M12 12h8M12 16h8M12 20h5" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <span class="journey__step-number">04</span>
+              <h3 class="journey__step-title">Pack Fresh</h3>
+              <p class="journey__step-text">
+                Packed at source to lock in aroma, freshness and natural character —
+                minimal processing, maximum integrity.
+              </p>
+            </li>
+            <li class="journey__step">
+              <div class="journey__step-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="4" y="12" width="24" height="12" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 12V9a2 2 0 012-2h8a2 2 0 012 2v3" stroke="currentColor" stroke-width="1.5"/><circle cx="22" cy="21" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <span class="journey__step-number">05</span>
+              <h3 class="journey__step-title">Deliver</h3>
+              <p class="journey__step-text">
+                From our farms to your home — carefully dispatched to ensure you
+                receive every product at its finest.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ===================== S4: OUR STORY (FOUNDERS) ===================== -->
+      <section class="founders" id="our-story" aria-labelledby="founders-heading">
+        <div class="container">
+          <span class="section-label">OUR STORY</span>
+          <h2 class="section-heading" id="founders-heading">
+            Two Founders. One Purpose.
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-intro">
+            Elora Spices was born from a shared conviction — that the gap between farm
+            and home should be shorter, more transparent, and more meaningful.
+          </p>
+
+          <div class="founders__grid">
+            <article class="founder-card">
+              <div class="founder-card__header">
+                <div class="founder-card__photo-wrapper">
+                  <!-- Founder photo placeholder — swap with client image -->
+                  <div class="founder-card__photo-placeholder" aria-label="Jeevan, Co-Founder"></div>
+                </div>
+                <div class="founder-card__info">
+                  <h3 class="founder-card__name">Jeevan</h3>
+                  <span class="founder-card__role">CO-FOUNDER</span>
+                  <span class="founder-card__dept">Brand &amp; Business Development</span>
+                </div>
+              </div>
+              <p class="founder-card__bio">
+                With a deep personal interest in agriculture and natural products, Jeevan drives
+                the brand vision, business development and customer transparency at Elora
+                Spices. His conviction that consumers deserve to know exactly where their food
+                comes from is the founding principle of the brand.
+              </p>
+            </article>
+
+            <article class="founder-card">
+              <div class="founder-card__header">
+                <div class="founder-card__photo-wrapper">
+                  <!-- Founder photo placeholder — swap with client image -->
+                  <div class="founder-card__photo-placeholder" aria-label="Balaji, Co-Founder"></div>
+                </div>
+                <div class="founder-card__info">
+                  <h3 class="founder-card__name">Balaji</h3>
+                  <span class="founder-card__role">CO-FOUNDER</span>
+                  <span class="founder-card__dept">Quality &amp; Responsible Practices</span>
+                </div>
+              </div>
+              <p class="founder-card__bio">
+                An anaesthesia doctor by profession, Balaji brings a healthcare perspective to
+                food quality and responsible production. His belief in the deep connection
+                between soil health, farming practices and human wellbeing shapes every quality
+                decision at Elora Spices.
+              </p>
+            </article>
+          </div>
+
+          <blockquote class="founders__quote">
+            <div class="founders__quote-mark" aria-hidden="true">"</div>
+            <p class="founders__quote-text">
+              "We don't just want to sell agricultural products. We want to be part of a
+              movement that brings farming closer to nature."
+            </p>
+            <cite class="founders__quote-cite">— Jeevan &amp; Balaji, Co-Founders, Elora Spices</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- ===================== S5: VISION & MISSION (COMBINED, CONDENSED) ===================== -->
+      <section class="vision-mission" id="vision-mission" aria-labelledby="vision-heading">
+        <div class="container">
+          <div class="vision-mission__grid">
+            <article class="vision-card">
+              <div class="vision-card__icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="var(--color-primary)" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="var(--color-primary)" stroke-width="1.5"/></svg>
+              </div>
+              <span class="vision-card__label">OUR VISION</span>
+              <h2 class="vision-card__title" id="vision-heading">
+                A Future Where Farming Comes First.
+              </h2>
+              <div class="section-divider section-divider--left"></div>
+              <p class="vision-card__text">
+                To be India's most trusted farm-to-home brand — where every
+                product carries the integrity of the soil and the care of the farmer.
+                We envision a world where the distance between farm and table is
+                short, transparent and deeply meaningful. A world where naturally
+                inspired farming is the standard, not the exception.
+              </p>
+            </article>
+
+            <article class="mission-card">
+              <div class="mission-card__icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="var(--color-surface)" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="var(--color-surface)" stroke-width="1.5"/></svg>
+              </div>
+              <span class="mission-card__label">OUR MISSION</span>
+              <h3 class="mission-card__title">Connect. Cultivate. Deliver.</h3>
+              <div class="section-divider section-divider--gold"></div>
+              <p class="mission-card__text">
+                To connect conscious consumers with naturally cultivated
+                agricultural products sourced directly from Indian farms — ensuring
+                quality, transparency and fair value for the farmers who make it all
+                possible. Every product we offer is a bridge between the land and
+                your home.
+              </p>
+            </article>
+          </div>
+
+          <!-- Five Principles -->
+          <h3 class="principles__heading">Five Principles We Live By</h3>
+          <div class="principles__grid">
+            <article class="principle-card">
+              <div class="principle-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C12 2 4 10 4 16c0 4 3.5 6 8 6s8-2 8-6c0-6-8-14-8-14z" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/></svg>
+              </div>
+              <h4 class="principle-card__title">Nature</h4>
+              <p class="principle-card__text">Respecting natural ecosystems in every farming decision.</p>
+            </article>
+            <article class="principle-card">
+              <div class="principle-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="3" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/><circle cx="16" cy="8" r="3" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/><path d="M4 18c0-3 3-5 8-5s8 2 8 5" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/></svg>
+              </div>
+              <h4 class="principle-card__title">Farmers</h4>
+              <p class="principle-card__text">Building meaningful, long-term relationships with our growers.</p>
+            </article>
+            <article class="principle-card">
+              <div class="principle-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polygon points="12,2 15,9 22,9 16.5,14 18.5,21 12,17 5.5,21 7.5,14 2,9 9,9" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/></svg>
+              </div>
+              <h4 class="principle-card__title">Quality</h4>
+              <p class="principle-card__text">Freshness, natural aroma and authentic character in every product.</p>
+            </article>
+            <article class="principle-card">
+              <div class="principle-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/><path d="M8 8h8M8 12h8M8 16h5" stroke="var(--color-primary)" stroke-width="1.5"/></svg>
+              </div>
+              <h4 class="principle-card__title">Freshness</h4>
+              <p class="principle-card__text">Careful packaging that preserves quality from farm to home.</p>
+            </article>
+            <article class="principle-card">
+              <div class="principle-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21C12 21 4 15 4 9.5C4 6.5 6.5 4 9 4c1.5 0 2.5.5 3 1.5C12.5 4.5 13.5 4 15 4c2.5 0 5 2.5 5 5.5C20 15 12 21 12 21z" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/></svg>
+              </div>
+              <h4 class="principle-card__title">Trust</h4>
+              <p class="principle-card__text">Transparent, honest relationships with every customer.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== S6: PRODUCTS ===================== -->
+      <section class="products" id="products" aria-labelledby="products-heading">
+        <div class="container">
+          <span class="section-label">OUR PRODUCTS</span>
+          <h2 class="section-heading" id="products-heading">
+            Nature's Finest, Packed Fresh
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-intro">
+            Every product in our range is sourced from trusted farms and packed with care — delivering freshness, quality and natural character you can taste.
+          </p>
+
+          <div class="products__grid">
+            <!-- Product 1: Black Pepper Powder -->
+            <article class="product-card" tabindex="0" aria-label="Black Pepper Powder — click to see details">
+              <div class="product-card__inner">
+                <div class="product-card__front">
+                  <div class="product-card__image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1599909533601-b0453b4a8508?w=400&q=80" alt="Ground black pepper powder with whole peppercorns, naturally cultivated from South Indian farms" loading="lazy" class="product-card__image" />
+                  </div>
+                  <h3 class="product-card__name">Black Pepper Powder</h3>
+                  <p class="product-card__tagline">Bold. Aromatic. Essential.</p>
+                </div>
+                <div class="product-card__back">
+                  <h3 class="product-card__name">Black Pepper Powder</h3>
+                  <p class="product-card__description">
+                    Stone-ground from naturally cultivated Malabar peppercorns. Known for its
+                    sharp, warm flavour and rich aroma — a kitchen staple sourced directly from
+                    pepper vines in Kerala's spice country.
+                  </p>
+                  <span class="product-card__origin">Origin: Kerala</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 2: Turmeric Powder -->
+            <article class="product-card" tabindex="0" aria-label="Turmeric Powder — click to see details">
+              <div class="product-card__inner">
+                <div class="product-card__front">
+                  <div class="product-card__image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400&q=80" alt="Vibrant golden turmeric powder from naturally cultivated Indian turmeric roots" loading="lazy" class="product-card__image" />
+                  </div>
+                  <h3 class="product-card__name">Turmeric Powder</h3>
+                  <p class="product-card__tagline">Golden. Pure. Heritage.</p>
+                </div>
+                <div class="product-card__back">
+                  <h3 class="product-card__name">Turmeric Powder</h3>
+                  <p class="product-card__description">
+                    Sourced from the finest naturally cultivated turmeric farms in Tamil Nadu and
+                    Kerala. High curcumin content, vibrant colour, and the honest, earthy aroma
+                    that only responsibly grown turmeric delivers.
+                  </p>
+                  <span class="product-card__origin">Origin: Tamil Nadu &amp; Kerala</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 3: Coriander Powder -->
+            <article class="product-card" tabindex="0" aria-label="Coriander Powder — click to see details">
+              <div class="product-card__inner">
+                <div class="product-card__front">
+                  <div class="product-card__image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" alt="Freshly ground coriander powder and whole coriander seeds" loading="lazy" class="product-card__image" />
+                  </div>
+                  <h3 class="product-card__name">Coriander Powder</h3>
+                  <p class="product-card__tagline">Citrusy. Warm. Versatile.</p>
+                </div>
+                <div class="product-card__back">
+                  <h3 class="product-card__name">Coriander Powder</h3>
+                  <p class="product-card__description">
+                    Ground from whole coriander seeds grown through responsible farming practices.
+                    A gentle, citrusy spice that forms the base of South Indian cooking — freshly
+                    packed to preserve its delicate aroma.
+                  </p>
+                  <span class="product-card__origin">Origin: South India</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 4: Cumin Powder -->
+            <article class="product-card" tabindex="0" aria-label="Cumin Powder — click to see details">
+              <div class="product-card__inner">
+                <div class="product-card__front">
+                  <div class="product-card__image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1599909533601-b0453b4a8508?w=400&q=80" alt="Finely ground cumin powder with whole cumin seeds" loading="lazy" class="product-card__image" />
+                  </div>
+                  <h3 class="product-card__name">Cumin Powder</h3>
+                  <p class="product-card__tagline">Earthy. Smoky. Deep.</p>
+                </div>
+                <div class="product-card__back">
+                  <h3 class="product-card__name">Cumin Powder</h3>
+                  <p class="product-card__description">
+                    Roasted and ground from naturally cultivated cumin. Its deep, smoky warmth
+                    anchors dals, curries and spice blends — a foundational flavour in every Indian kitchen.
+                  </p>
+                  <span class="product-card__origin">Origin: Rajasthan</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 5: Chilli Powder -->
+            <article class="product-card" tabindex="0" aria-label="Chilli Powder — click to see details">
+              <div class="product-card__inner">
+                <div class="product-card__front">
+                  <div class="product-card__image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1583119022894-919a68a3d0e3?w=400&q=80" alt="Deep red chilli powder made from naturally dried Indian red chillies" loading="lazy" class="product-card__image" />
+                  </div>
+                  <h3 class="product-card__name">Chilli Powder</h3>
+                  <p class="product-card__tagline">Fiery. Vibrant. Honest.</p>
+                </div>
+                <div class="product-card__back">
+                  <h3 class="product-card__name">Chilli Powder</h3>
+                  <p class="product-card__description">
+                    Sun-dried and stone-ground from naturally cultivated Indian chillies. Rich,
+                    honest heat with the deep red colour that comes from careful, responsible
+                    farming — no artificial additives, just real spice.
+                  </p>
+                  <span class="product-card__origin">Origin: Andhra Pradesh</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 6: Cardamom -->
+            <article class="product-card" tabindex="0" aria-label="Cardamom — click to see details">
+              <div class="product-card__inner">
+                <div class="product-card__front">
+                  <div class="product-card__image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" alt="Whole green cardamom pods from the cardamom farms of Kerala" loading="lazy" class="product-card__image" />
+                  </div>
+                  <h3 class="product-card__name">Cardamom</h3>
+                  <p class="product-card__tagline">Fragrant. Precious. Luxurious.</p>
+                </div>
+                <div class="product-card__back">
+                  <h3 class="product-card__name">Cardamom</h3>
+                  <p class="product-card__description">
+                    Hand-picked from the misty cardamom hills of Kerala. Each pod carries
+                    an intense, sweet aroma — the queen of spices, naturally cultivated and
+                    packed fresh to preserve its signature fragrance.
+                  </p>
+                  <span class="product-card__origin">Origin: Kerala</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 7: Garam Masala -->
+            <article class="product-card" tabindex="0" aria-label="Garam Masala — click to see details">
+              <div class="product-card__inner">
+                <div class="product-card__front">
+                  <div class="product-card__image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" alt="Aromatic garam masala blend of naturally cultivated whole spices" loading="lazy" class="product-card__image" />
+                  </div>
+                  <h3 class="product-card__name">Garam Masala</h3>
+                  <p class="product-card__tagline">Complex. Warm. Signature.</p>
+                </div>
+                <div class="product-card__back">
+                  <h3 class="product-card__name">Garam Masala</h3>
+                  <p class="product-card__description">
+                    A carefully balanced blend of naturally cultivated whole spices — roasted and
+                    ground in small batches. Every pinch carries warmth, depth and the
+                    unmistakable character of South Indian spice craft.
+                  </p>
+                  <span class="product-card__origin">Origin: Blended, South India</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 8: Sambar Powder -->
+            <article class="product-card" tabindex="0" aria-label="Sambar Powder — click to see details">
+              <div class="product-card__inner">
+                <div class="product-card__front">
+                  <div class="product-card__image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" alt="Traditional sambar powder blend for South Indian cooking" loading="lazy" class="product-card__image" />
+                  </div>
+                  <h3 class="product-card__name">Sambar Powder</h3>
+                  <p class="product-card__tagline">Traditional. Robust. Comforting.</p>
+                </div>
+                <div class="product-card__back">
+                  <h3 class="product-card__name">Sambar Powder</h3>
+                  <p class="product-card__description">
+                    A heritage recipe ground from naturally sourced ingredients — the backbone of
+                    every South Indian meal. Rich, aromatic and deeply familiar, made the way
+                    generations have always made it.
+                  </p>
+                  <span class="product-card__origin">Origin: Tamil Nadu</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 9: Rasam Powder -->
+            <article class="product-card" tabindex="0" aria-label="Rasam Powder — click to see details">
+              <div class="product-card__inner">
+                <div class="product-card__front">
+                  <div class="product-card__image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" alt="Freshly ground rasam powder for traditional South Indian rasam" loading="lazy" class="product-card__image" />
+                  </div>
+                  <h3 class="product-card__name">Rasam Powder</h3>
+                  <p class="product-card__tagline">Tangy. Peppery. Soulful.</p>
+                </div>
+                <div class="product-card__back">
+                  <h3 class="product-card__name">Rasam Powder</h3>
+                  <p class="product-card__description">
+                    The soul of South Indian comfort food. Naturally cultivated spices
+                    ground to produce a tangy, peppery blend — perfect for the warm,
+                    restorative rasam that every home deserves.
+                  </p>
+                  <span class="product-card__origin">Origin: Tamil Nadu</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 10: Mustard Seeds -->
+            <article class="product-card" tabindex="0" aria-label="Mustard Seeds — click to see details">
+              <div class="product-card__inner">
+                <div class="product-card__front">
+                  <div class="product-card__image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" alt="Whole black mustard seeds for tempering in South Indian cuisine" loading="lazy" class="product-card__image" />
+                  </div>
+                  <h3 class="product-card__name">Mustard Seeds</h3>
+                  <p class="product-card__tagline">Sharp. Essential. Foundational.</p>
+                </div>
+                <div class="product-card__back">
+                  <h3 class="product-card__name">Mustard Seeds</h3>
+                  <p class="product-card__description">
+                    Small but mighty — naturally cultivated black mustard seeds that crackle and
+                    pop to release a sharp, nutty flavour. The first ingredient in every
+                    South Indian tempering.
+                  </p>
+                  <span class="product-card__origin">Origin: South India</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 11: Fenugreek Seeds -->
+            <article class="product-card" tabindex="0" aria-label="Fenugreek Seeds — click to see details">
+              <div class="product-card__inner">
+                <div class="product-card__front">
+                  <div class="product-card__image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" alt="Whole fenugreek seeds, naturally cultivated for authentic flavour" loading="lazy" class="product-card__image" />
+                  </div>
+                  <h3 class="product-card__name">Fenugreek Seeds</h3>
+                  <p class="product-card__tagline">Bitter. Warm. Medicinal.</p>
+                </div>
+                <div class="product-card__back">
+                  <h3 class="product-card__name">Fenugreek Seeds</h3>
+                  <p class="product-card__description">
+                    Naturally cultivated fenugreek with a distinctive, slightly bitter warmth.
+                    Used in pickles, curries and traditional remedies — a spice with
+                    deep roots in Indian culinary and wellness heritage.
+                  </p>
+                  <span class="product-card__origin">Origin: South India</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== S7: WHY ELORA SPICES (optional — included) ===================== -->
+      <section class="why-elora" id="why-elora" aria-labelledby="why-elora-heading">
+        <div class="container">
+          <span class="section-label">WHY CHOOSE US</span>
+          <h2 class="section-heading" id="why-elora-heading">
+            Why Elora Spices?
+          </h2>
+          <div class="section-divider"></div>
+          <div class="why-elora__grid">
+            <article class="why-card">
+              <div class="why-card__icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4C16 4 8 12 8 20c0 4 3 7 8 7s8-3 8-7c0-8-8-16-8-16z" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/></svg>
+              </div>
+              <h3 class="why-card__title">Naturally Cultivated</h3>
+              <p class="why-card__text">Every product grown through responsible, naturally inspired farming practices.</p>
+            </article>
+            <article class="why-card">
+              <div class="why-card__icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="10" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/><path d="M12 16l3 3 5-6" stroke="var(--color-primary)" stroke-width="1.5"/></svg>
+              </div>
+              <h3 class="why-card__title">Quality Assured</h3>
+              <p class="why-card__text">Every batch inspected, sorted and packed fresh at source — no middlemen, no compromise.</p>
+            </article>
+            <article class="why-card">
+              <div class="why-card__icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4v24M4 16h24" stroke="var(--color-primary)" stroke-width="1.5"/><circle cx="16" cy="16" r="12" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/></svg>
+              </div>
+              <h3 class="why-card__title">Farm-to-Home Transparency</h3>
+              <p class="why-card__text">Know exactly where your food comes from — we believe in honest, open sourcing.</p>
+            </article>
+            <article class="why-card">
+              <div class="why-card__icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 28C16 28 4 20 4 12c0-4.4 3.6-8 8-8 2.4 0 3.6.8 4 2 .4-1.2 1.6-2 4-2 4.4 0 8 3.6 8 8 0 8-12 16-12 16z" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/></svg>
+              </div>
+              <h3 class="why-card__title">Farmer Partnerships</h3>
+              <p class="why-card__text">Fair value, long-term relationships and shared commitment to naturally inspired farming.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== S8: OUR COMMITMENT ===================== -->
+      <section class="commitment" id="commitment" aria-labelledby="commitment-heading">
+        <div class="container">
+          <span class="section-label">OUR COMMITMENT</span>
+          <h2 class="section-heading" id="commitment-heading">
+            A Promise to the Land. A Promise to You.
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-intro">
+            At Elora Spices, quality isn't a department — it's a culture. From the soil our
+            farmers nurture to the packaging that reaches your kitchen, every step reflects our
+            promise: naturally cultivated, honestly delivered, and always fresh.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================== S9: CONTACT ===================== -->
+      <section class="contact" id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+          <span class="section-label">CONTACT US</span>
+          <h2 class="section-heading" id="contact-heading">
+            Let's Grow Something Meaningful Together.
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-intro">
+            Whether you're a customer, a farmer or a business — we'd love to hear from you.
+            Every conversation begins a relationship.
+          </p>
+
+          <div class="contact__grid">
+            <div class="contact__info">
+              <div class="contact__tabs" role="tablist" aria-label="Contact type">
+                <button class="contact__tab contact__tab--active" role="tab" aria-selected="true" data-tab="customers">CUSTOMERS</button>
+                <button class="contact__tab" role="tab" aria-selected="false" data-tab="farmers">FARMERS</button>
+                <button class="contact__tab" role="tab" aria-selected="false" data-tab="businesses">BUSINESSES</button>
+              </div>
+
+              <ul class="contact__details" role="list">
+                <li class="contact__detail">
+                  <svg class="contact__detail-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="2" stroke="var(--color-primary)" stroke-width="1.5"/><path d="M4 8l8 5 8-5" stroke="var(--color-primary)" stroke-width="1.5"/></svg>
+                  <div>
+                    <span class="contact__detail-label">EMAIL</span>
+                    <a href="mailto:hello@eloraspices.com" class="contact__detail-value">hello@eloraspices.com</a>
+                  </div>
+                </li>
+                <li class="contact__detail">
+                  <svg class="contact__detail-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-1z" stroke="var(--color-primary)" stroke-width="1.5"/></svg>
+                  <div>
+                    <span class="contact__detail-label">PHONE</span>
+                    <a href="tel:+919876543210" class="contact__detail-value">+91 98765 43210</a>
+                  </div>
+                </li>
+                <li class="contact__detail">
+                  <svg class="contact__detail-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.3-1.2C8.7 21.6 10.3 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z" stroke="var(--color-primary)" stroke-width="1.5"/></svg>
+                  <div>
+                    <span class="contact__detail-label">WHATSAPP</span>
+                    <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="contact__detail-value contact__detail-value--link">Chat on WhatsApp ↗</a>
+                  </div>
+                </li>
+                <li class="contact__detail">
+                  <svg class="contact__detail-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="10" r="3" stroke="var(--color-primary)" stroke-width="1.5"/><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8z" stroke="var(--color-primary)" stroke-width="1.5"/></svg>
+                  <div>
+                    <span class="contact__detail-label">LOCATION</span>
+                    <span class="contact__detail-value">South India (Farms across Kerala &amp; Tamil Nadu)</span>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="contact__business-note">
+                <h3 class="contact__business-note-title">BUSINESS ENQUIRIES</h3>
+                <p>
+                  For wholesale, retail partnerships, farming collaborations or media enquiries,
+                  please select "Business Collaboration" in the form and provide details of your interest.
+                </p>
+              </div>
+            </div>
+
+            <form class="contact__form" id="contact-form" action="#" method="POST" novalidate>
+              <h3 class="contact__form-title">Send Us a Message</h3>
+
+              <div class="form-group">
+                <label for="contact-name" class="form-label">FULL NAME <span class="form-required" aria-hidden="true">*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your name" required aria-required="true" />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">EMAIL ADDRESS <span class="form-required" aria-hidden="true">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="you@example.com" required aria-required="true" />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">PHONE NUMBER</label>
+                <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX" />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-type" class="form-label">TYPE OF ENQUIRY</label>
+                <select id="contact-type" name="enquiry_type" class="form-input form-select">
+                  <option value="" disabled selected>Select enquiry type</option>
+                  <option value="general">General Enquiry</option>
+                  <option value="product">Product Information</option>
+                  <option value="wholesale">Wholesale / Retail</option>
+                  <option value="farming">Farming Collaboration</option>
+                  <option value="business">Business Collaboration</option>
+                  <option value="media">Media / Press</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">MESSAGE <span class="form-required" aria-hidden="true">*</span></label>
+                <textarea id="contact-message" name="message" class="form-input form-textarea" rows="5" placeholder="Tell us about your interest, questions or requirements..." required aria-required="true"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+              <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+
     </main>
-    <footer>
-      <!-- Site footer placeholder -->
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer" id="site-footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="#" class="footer__logo" aria-label="Elora Spices — Home">
+              <svg class="footer__logo-icon" width="36" height="36" viewBox="0 0 40 40" aria-hidden="true">
+                <circle cx="20" cy="20" r="18" fill="var(--color-accent)" opacity="0.2"/>
+                <path d="M20 6 C20 6 12 14 12 22 C12 27 15.5 30 20 30 C24.5 30 28 27 28 22 C28 14 20 6 20 6Z" fill="var(--color-surface)" opacity="0.8"/>
+                <path d="M20 10 C20 10 16 16 16 21 C16 24 17.8 26 20 26 C22.2 26 24 24 24 21 C24 16 20 10 20 10Z" fill="var(--color-accent)" opacity="0.6"/>
+                <line x1="20" y1="18" x2="20" y2="30" stroke="var(--color-surface)" stroke-width="1.5"/>
+              </svg>
+              <span class="footer__logo-text">Elora Spices</span>
+            </a>
+            <p class="footer__tagline">Nature's Finest, Packed Fresh.</p>
+            <p class="footer__tagline-italic"><em>From the farm, with care.</em></p>
+            <div class="footer__social">
+              <!-- Social links — swap href with client links -->
+              <a href="#" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+              </a>
+              <a href="#" class="footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.3-1.2C8.7 21.6 10.3 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z" stroke="currentColor" stroke-width="1.5"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <nav class="footer__nav" aria-label="Footer navigation">
+            <ul class="footer__nav-links" role="list">
+              <li><a href="#hero" class="footer__nav-link">Home</a></li>
+              <li><a href="#our-story" class="footer__nav-link">Our Story</a></li>
+              <li><a href="#natural-farming" class="footer__nav-link">Natural Farming</a></li>
+              <li><a href="#products" class="footer__nav-link">Products</a></li>
+              <li><a href="#vision-mission" class="footer__nav-link">Vision &amp; Mission</a></li>
+              <li><a href="#contact" class="footer__nav-link">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">© 2026 Elora Spices. All rights reserved.</p>
+          <div class="footer__legal">
+            <a href="#" class="footer__legal-link">Privacy Policy</a>
+            <a href="#" class="footer__legal-link">Terms of Use</a>
+          </div>
+        </div>
+      </div>
     </footer>
+
   </body>
 </html>
