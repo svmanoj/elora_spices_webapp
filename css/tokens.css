@@ -14,6 +14,11 @@
   --color-highlight: #DDEFE6;
   /* Palette: Earth Gold — sparing use only */
   --color-accent: #C9A227;
+  /* Text colors */
+  --color-text: #1A2E23;
+  --color-text-muted: #4A6B5C;
+  --color-text-light: #8CA89A;
+  --color-text-on-dark: #E8F0EB;
 
   /* Spacing scale */
   --space-xs: 4px;
@@ -21,14 +26,49 @@
   --space-md: 16px;
   --space-lg: 24px;
   --space-xl: 32px;
-  --space-2xl: 64px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+
+  /* Section vertical rhythm */
+  --section-pad-y: clamp(64px, 8vw, 120px);
 
   /* Fonts */
   --font-heading: "Playfair Display", Georgia, serif;
   --font-body: "DM Sans", -apple-system, sans-serif;
   --font-accent: "Lora", Georgia, serif;
 
+  /* Type scale (fluid) */
+  --text-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
+  --text-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.875rem);
+  --text-base: clamp(0.9rem, 0.85rem + 0.25vw, 1rem);
+  --text-lg: clamp(1rem, 0.9rem + 0.5vw, 1.15rem);
+  --text-xl: clamp(1.15rem, 1rem + 0.75vw, 1.35rem);
+  --text-2xl: clamp(1.4rem, 1.1rem + 1.5vw, 1.85rem);
+  --text-3xl: clamp(1.75rem, 1.3rem + 2.25vw, 2.5rem);
+  --text-4xl: clamp(2.2rem, 1.5rem + 3.5vw, 3.5rem);
+  --text-5xl: clamp(2.8rem, 1.8rem + 5vw, 4.5rem);
+
   /* Shared card chrome */
-  --radius-md: 8px;
-  --shadow-card: 0 4px 16px rgba(6, 78, 59, 0.08);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --shadow-card: 0 4px 24px rgba(6, 78, 59, 0.06);
+  --shadow-card-hover: 0 8px 32px rgba(6, 78, 59, 0.12);
+  --shadow-nav: 0 2px 12px rgba(6, 78, 59, 0.08);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 200ms;
+  --duration-normal: 350ms;
+  --duration-slow: 600ms;
+
+  /* Z-index scale */
+  --z-drawer: 200;
+  --z-header: 100;
+  --z-overlay: 150;
+  --z-hero-content: 10;
 }

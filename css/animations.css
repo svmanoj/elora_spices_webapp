@@ -1,1 +1,106 @@
 /* Animations: keyframes, transitions, and motion utilities. */
+/* Motion philosophy: purposeful, sparse, high-impact. */
+
+/* ─── Hero scroll hint bounce ─── */
+@keyframes scroll-hint-bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);
+    opacity: 1;
+  }
+}
+
+/* ─── Hero background slow zoom (Ken Burns) ─── */
+@keyframes hero-ken-burns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+.hero__slide--active .hero__bg {
+  animation: hero-ken-burns 8s var(--ease-out) forwards;
+}
+
+/* ─── Hero content entrance ─── */
+@keyframes hero-content-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__badge {
+  animation: hero-content-entrance 0.8s var(--ease-out) 0.2s both;
+}
+
+.hero__title {
+  animation: hero-content-entrance 0.8s var(--ease-out) 0.4s both;
+}
+
+.hero__subtitle {
+  animation: hero-content-entrance 0.8s var(--ease-out) 0.6s both;
+}
+
+.hero__description {
+  animation: hero-content-entrance 0.8s var(--ease-out) 0.7s both;
+}
+
+.hero__actions {
+  animation: hero-content-entrance 0.8s var(--ease-out) 0.8s both;
+}
+
+.hero__social-proof {
+  animation: hero-content-entrance 0.8s var(--ease-out) 0.9s both;
+}
+
+/* ─── Hero farm badge float-in ─── */
+@keyframes farm-badge-float {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero__farm-badge {
+  animation: farm-badge-float 0.6s var(--ease-out) 1.2s both;
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero__slide--active .hero__bg {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .reveal--stagger > * {
+    opacity: 1;
+    transform: none;
+  }
+}
