@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Elora Spices — Nature's Finest, Packed Fresh.</title>
     <meta name="description" content="Elora Spices brings you naturally cultivated, carefully sourced, and freshly packed agricultural products from South India's finest farms. From farm to your home." />
+    <meta name="keywords" content="Elora Spices, spices, South India, naturally cultivated spices, black pepper powder, turmeric powder, cardamom, coriander powder, cumin powder, chilli powder, garam masala, sambar powder, rasam powder, mustard seeds, fenugreek seeds, farm fresh spices, Kerala spices, Tamil Nadu spices" />
+    <meta name="author" content="Elora Spices" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://eloraspices.com/" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Elora Spices — Nature's Finest, Packed Fresh." />
     <meta property="og:description" content="Naturally cultivated. Carefully sourced. Freshly packed. Premium agricultural products rooted in responsible cultivation from South India." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://eloraspices.com" />
-    <meta property="og:image" content="assets/images/og-image.jpg" />
+    <meta property="og:url" content="https://eloraspices.com/" />
+    <meta property="og:image" content="https://eloraspices.com/assets/images/og-image.jpg" />
+    <meta property="og:site_name" content="Elora Spices" />
+    <meta property="og:locale" content="en_IN" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Elora Spices — Nature's Finest, Packed Fresh." />
     <meta name="twitter:description" content="Naturally cultivated. Carefully sourced. Freshly packed. Premium agricultural products from South India." />
+    <meta name="twitter:image" content="https://eloraspices.com/assets/images/og-image.jpg" />
 
-    <!-- Favicon placeholder -->
+    <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,18 +55,303 @@
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/animations.css" />
 
-    <!-- Structured Data -->
+    <!-- Schema.org JSON-LD Structured Data (Organization + WebSite + ItemList Product Catalog) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Elora Spices",
-      "url": "https://eloraspices.com",
-      "description": "Naturally cultivated, carefully sourced, and freshly packed agricultural products from South India's finest farms.",
-      "foundingDate": "2011",
-      "founders": [
-        { "@type": "Person", "name": "Jeevan", "jobTitle": "Co-Founder, Brand & Business Development" },
-        { "@type": "Person", "name": "Balaji", "jobTitle": "Co-Founder, Quality & Responsible Practices" }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://eloraspices.com/#organization",
+          "name": "Elora Spices",
+          "url": "https://eloraspices.com",
+          "logo": "https://eloraspices.com/assets/images/logo.svg",
+          "image": "https://eloraspices.com/assets/images/og-image.jpg",
+          "description": "Naturally cultivated, carefully sourced, and freshly packed agricultural products from South India's finest farms.",
+          "foundingDate": "2011",
+          "founders": [
+            {
+              "@type": "Person",
+              "name": "Jeevan",
+              "jobTitle": "Co-Founder, Brand & Business Development",
+              "image": "https://eloraspices.com/assets/images/founder-jeevan.webp"
+            },
+            {
+              "@type": "Person",
+              "name": "Balaji",
+              "jobTitle": "Co-Founder, Quality & Responsible Practices",
+              "image": "https://eloraspices.com/assets/images/founder-balaji.webp"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Kerala & Tamil Nadu",
+            "addressCountry": "IN"
+          },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+91-98765-43210",
+              "contactType": "customer service",
+              "email": "hello@eloraspices.com",
+              "availableLanguage": ["English", "Tamil", "Malayalam", "Hindi"]
+            }
+          ],
+          "sameAs": [
+            "https://www.instagram.com/eloraspices",
+            "https://wa.me/919876543210"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://eloraspices.com/#website",
+          "url": "https://eloraspices.com",
+          "name": "Elora Spices",
+          "description": "Naturally cultivated, carefully sourced, and freshly packed agricultural products from South India.",
+          "publisher": {
+            "@id": "https://eloraspices.com/#organization"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://eloraspices.com/#products",
+          "name": "Elora Spices Product Catalog",
+          "description": "Naturally cultivated spices and agricultural products from South India.",
+          "numberOfItems": 11,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "Product",
+                "name": "Black Pepper Powder",
+                "description": "Stone-ground from naturally cultivated Malabar peppercorns. Known for its sharp, warm flavour and rich aroma — a kitchen staple sourced directly from pepper vines in Kerala's spice country.",
+                "image": "https://eloraspices.com/assets/images/black-pepper.webp",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Elora Spices"
+                },
+                "category": "Agricultural Products / Spices",
+                "countryOfOrigin": "IN",
+                "offers": {
+                  "@type": "Offer",
+                  "availability": "https://schema.org/InStock",
+                  "priceCurrency": "INR"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "Product",
+                "name": "Turmeric Powder",
+                "description": "Sourced from the finest naturally cultivated turmeric farms in Tamil Nadu and Kerala. High curcumin content, vibrant colour, and the honest, earthy aroma that only responsibly grown turmeric delivers.",
+                "image": "https://eloraspices.com/assets/images/turmeric.webp",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Elora Spices"
+                },
+                "category": "Agricultural Products / Spices",
+                "countryOfOrigin": "IN",
+                "offers": {
+                  "@type": "Offer",
+                  "availability": "https://schema.org/InStock",
+                  "priceCurrency": "INR"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "Product",
+                "name": "Coriander Powder",
+                "description": "Ground from whole coriander seeds grown through responsible farming practices. A gentle, citrusy spice that forms the base of South Indian cooking — freshly packed to preserve its delicate aroma.",
+                "image": "https://eloraspices.com/assets/images/coriander.webp",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Elora Spices"
+                },
+                "category": "Agricultural Products / Spices",
+                "countryOfOrigin": "IN",
+                "offers": {
+                  "@type": "Offer",
+                  "availability": "https://schema.org/InStock",
+                  "priceCurrency": "INR"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "Product",
+                "name": "Cumin Powder",
+                "description": "Roasted and ground from naturally cultivated cumin. Its deep, smoky warmth anchors dals, curries and spice blends — a foundational flavour in every Indian kitchen.",
+                "image": "https://eloraspices.com/assets/images/cumin.webp",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Elora Spices"
+                },
+                "category": "Agricultural Products / Spices",
+                "countryOfOrigin": "IN",
+                "offers": {
+                  "@type": "Offer",
+                  "availability": "https://schema.org/InStock",
+                  "priceCurrency": "INR"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "Product",
+                "name": "Chilli Powder",
+                "description": "Sun-dried and stone-ground from naturally cultivated Indian chillies. Rich, honest heat with the deep red colour that comes from careful, responsible farming — no artificial additives, just real spice.",
+                "image": "https://eloraspices.com/assets/images/chilli.webp",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Elora Spices"
+                },
+                "category": "Agricultural Products / Spices",
+                "countryOfOrigin": "IN",
+                "offers": {
+                  "@type": "Offer",
+                  "availability": "https://schema.org/InStock",
+                  "priceCurrency": "INR"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "Product",
+                "name": "Cardamom",
+                "description": "Hand-picked from the misty cardamom hills of Kerala. Each pod carries an intense, sweet aroma — the queen of spices, naturally cultivated and packed fresh to preserve its signature fragrance.",
+                "image": "https://eloraspices.com/assets/images/cardamom.webp",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Elora Spices"
+                },
+                "category": "Agricultural Products / Spices",
+                "countryOfOrigin": "IN",
+                "offers": {
+                  "@type": "Offer",
+                  "availability": "https://schema.org/InStock",
+                  "priceCurrency": "INR"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "item": {
+                "@type": "Product",
+                "name": "Garam Masala",
+                "description": "A carefully balanced blend of naturally cultivated whole spices — roasted and ground in small batches. Every pinch carries warmth, depth and the unmistakable character of South Indian spice craft.",
+                "image": "https://eloraspices.com/assets/images/garam-masala.webp",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Elora Spices"
+                },
+                "category": "Agricultural Products / Spices",
+                "countryOfOrigin": "IN",
+                "offers": {
+                  "@type": "Offer",
+                  "availability": "https://schema.org/InStock",
+                  "priceCurrency": "INR"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "item": {
+                "@type": "Product",
+                "name": "Sambar Powder",
+                "description": "A heritage recipe ground from naturally sourced ingredients — the backbone of every South Indian meal. Rich, aromatic and deeply familiar, made the way generations have always made it.",
+                "image": "https://eloraspices.com/assets/images/sambar-powder.webp",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Elora Spices"
+                },
+                "category": "Agricultural Products / Spices",
+                "countryOfOrigin": "IN",
+                "offers": {
+                  "@type": "Offer",
+                  "availability": "https://schema.org/InStock",
+                  "priceCurrency": "INR"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 9,
+              "item": {
+                "@type": "Product",
+                "name": "Rasam Powder",
+                "description": "The soul of South Indian comfort food. Naturally cultivated spices ground to produce a tangy, peppery blend — perfect for the warm, restorative rasam that every home deserves.",
+                "image": "https://eloraspices.com/assets/images/rasam-powder.webp",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Elora Spices"
+                },
+                "category": "Agricultural Products / Spices",
+                "countryOfOrigin": "IN",
+                "offers": {
+                  "@type": "Offer",
+                  "availability": "https://schema.org/InStock",
+                  "priceCurrency": "INR"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 10,
+              "item": {
+                "@type": "Product",
+                "name": "Mustard Seeds",
+                "description": "Small but mighty — naturally cultivated black mustard seeds that crackle and pop to release a sharp, nutty flavour. The first ingredient in every South Indian tempering.",
+                "image": "https://eloraspices.com/assets/images/mustard-seeds.webp",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Elora Spices"
+                },
+                "category": "Agricultural Products / Spices",
+                "countryOfOrigin": "IN",
+                "offers": {
+                  "@type": "Offer",
+                  "availability": "https://schema.org/InStock",
+                  "priceCurrency": "INR"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 11,
+              "item": {
+                "@type": "Product",
+                "name": "Fenugreek Seeds",
+                "description": "Naturally cultivated fenugreek with a distinctive, slightly bitter warmth. Used in pickles, curries and traditional remedies — a spice with deep roots in Indian culinary and wellness heritage.",
+                "image": "https://eloraspices.com/assets/images/fenugreek-seeds.webp",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Elora Spices"
+                },
+                "category": "Agricultural Products / Spices",
+                "countryOfOrigin": "IN",
+                "offers": {
+                  "@type": "Offer",
+                  "availability": "https://schema.org/InStock",
+                  "priceCurrency": "INR"
+                }
+              }
+            }
+          ]
+        }
       ]
     }
     </script>
@@ -103,20 +397,20 @@
           <span class="nav__hamburger-line"></span>
         </button>
       </nav>
-
-      <!-- Mobile drawer -->
-      <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
-        <ul class="mobile-drawer__links" role="list">
-          <li><a href="#hero" class="mobile-drawer__link">Home</a></li>
-          <li><a href="#our-story" class="mobile-drawer__link">Our Story</a></li>
-          <li><a href="#natural-farming" class="mobile-drawer__link">Natural Farming</a></li>
-          <li><a href="#products" class="mobile-drawer__link">Products</a></li>
-          <li><a href="#vision-mission" class="mobile-drawer__link">Vision &amp; Mission</a></li>
-          <li><a href="#contact" class="mobile-drawer__link">Contact</a></li>
-        </ul>
-        <a href="#contact" class="btn btn--primary mobile-drawer__cta">Get in Touch</a>
-      </div>
     </header>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-drawer__links" role="list">
+        <li><a href="#hero" class="mobile-drawer__link mobile-drawer__link--active">Home</a></li>
+        <li><a href="#our-story" class="mobile-drawer__link">Our Story</a></li>
+        <li><a href="#natural-farming" class="mobile-drawer__link">Natural Farming</a></li>
+        <li><a href="#products" class="mobile-drawer__link">Products</a></li>
+        <li><a href="#vision-mission" class="mobile-drawer__link">Vision &amp; Mission</a></li>
+        <li><a href="#contact" class="mobile-drawer__link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn--primary mobile-drawer__cta">Get in Touch</a>
+    </div>
 
     <main>
 
@@ -125,25 +419,31 @@
         <div class="hero__carousel" id="hero-carousel">
           <div class="hero__slide hero__slide--active" data-slide="0">
             <img
-              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80"
+              src="assets/images/hero-1.webp"
               alt="Lush green farmland stretching to the horizon at sunrise, representing Elora Spices' commitment to natural farming in South India"
               class="hero__bg"
+              width="1600"
+              height="900"
               loading="eager"
             />
           </div>
           <div class="hero__slide" data-slide="1">
             <img
-              src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80"
+              src="assets/images/hero-2.webp"
               alt="Terraced spice plantations on hillside with morning mist, where Elora sources its naturally cultivated spices"
               class="hero__bg"
+              width="1600"
+              height="900"
               loading="eager"
             />
           </div>
           <div class="hero__slide" data-slide="2">
             <img
-              src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1920&q=80"
+              src="assets/images/hero-3.webp"
               alt="Golden harvest fields at dawn, symbolising the farm-to-home journey of Elora Spices' agricultural products"
               class="hero__bg"
+              width="1600"
+              height="900"
               loading="eager"
             />
           </div>
@@ -202,9 +502,11 @@
           <div class="natural-farming__grid">
             <div class="natural-farming__image-col">
               <img
-                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80"
+                src="assets/images/natural-farming.webp"
                 alt="Sunlit farmlands in South India where Elora Spices sources its naturally cultivated produce"
                 class="natural-farming__photo"
+                width="800"
+                height="600"
                 loading="lazy"
               />
               <div class="natural-farming__stat">
@@ -345,8 +647,14 @@
             <article class="founder-card">
               <div class="founder-card__header">
                 <div class="founder-card__photo-wrapper">
-                  <!-- Founder photo placeholder — swap with client image -->
-                  <div class="founder-card__photo-placeholder" aria-label="Jeevan, Co-Founder"></div>
+                  <img
+                    src="assets/images/founder-jeevan.webp"
+                    alt="Jeevan, Co-Founder of Elora Spices"
+                    class="founder-card__photo"
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="founder-card__info">
                   <h3 class="founder-card__name">Jeevan</h3>
@@ -365,8 +673,14 @@
             <article class="founder-card">
               <div class="founder-card__header">
                 <div class="founder-card__photo-wrapper">
-                  <!-- Founder photo placeholder — swap with client image -->
-                  <div class="founder-card__photo-placeholder" aria-label="Balaji, Co-Founder"></div>
+                  <img
+                    src="assets/images/founder-balaji.webp"
+                    alt="Balaji, Co-Founder of Elora Spices"
+                    class="founder-card__photo"
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                  />
                 </div>
                 <div class="founder-card__info">
                   <h3 class="founder-card__name">Balaji</h3>
@@ -489,11 +803,11 @@
 
           <div class="products__grid">
             <!-- Product 1: Black Pepper Powder -->
-            <article class="product-card" tabindex="0" aria-label="Black Pepper Powder — click to see details">
+            <article class="product-card" tabindex="0" role="button" aria-expanded="false" aria-label="Black Pepper Powder — click to see details">
               <div class="product-card__inner">
                 <div class="product-card__front">
                   <div class="product-card__image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1599909533601-b0453b4a8508?w=400&q=80" alt="Ground black pepper powder with whole peppercorns, naturally cultivated from South Indian farms" loading="lazy" class="product-card__image" />
+                    <img src="assets/images/black-pepper.webp" alt="Ground black pepper powder with whole peppercorns, naturally cultivated from South Indian farms" width="600" height="450" loading="lazy" class="product-card__image" />
                   </div>
                   <h3 class="product-card__name">Black Pepper Powder</h3>
                   <p class="product-card__tagline">Bold. Aromatic. Essential.</p>
@@ -511,11 +825,11 @@
             </article>
 
             <!-- Product 2: Turmeric Powder -->
-            <article class="product-card" tabindex="0" aria-label="Turmeric Powder — click to see details">
+            <article class="product-card" tabindex="0" role="button" aria-expanded="false" aria-label="Turmeric Powder — click to see details">
               <div class="product-card__inner">
                 <div class="product-card__front">
                   <div class="product-card__image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400&q=80" alt="Vibrant golden turmeric powder from naturally cultivated Indian turmeric roots" loading="lazy" class="product-card__image" />
+                    <img src="assets/images/turmeric.webp" alt="Vibrant golden turmeric powder from naturally cultivated Indian turmeric roots" width="600" height="450" loading="lazy" class="product-card__image" />
                   </div>
                   <h3 class="product-card__name">Turmeric Powder</h3>
                   <p class="product-card__tagline">Golden. Pure. Heritage.</p>
@@ -533,11 +847,11 @@
             </article>
 
             <!-- Product 3: Coriander Powder -->
-            <article class="product-card" tabindex="0" aria-label="Coriander Powder — click to see details">
+            <article class="product-card" tabindex="0" role="button" aria-expanded="false" aria-label="Coriander Powder — click to see details">
               <div class="product-card__inner">
                 <div class="product-card__front">
                   <div class="product-card__image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" alt="Freshly ground coriander powder and whole coriander seeds" loading="lazy" class="product-card__image" />
+                    <img src="assets/images/coriander.webp" alt="Freshly ground coriander powder and whole coriander seeds" width="600" height="450" loading="lazy" class="product-card__image" />
                   </div>
                   <h3 class="product-card__name">Coriander Powder</h3>
                   <p class="product-card__tagline">Citrusy. Warm. Versatile.</p>
@@ -555,11 +869,11 @@
             </article>
 
             <!-- Product 4: Cumin Powder -->
-            <article class="product-card" tabindex="0" aria-label="Cumin Powder — click to see details">
+            <article class="product-card" tabindex="0" role="button" aria-expanded="false" aria-label="Cumin Powder — click to see details">
               <div class="product-card__inner">
                 <div class="product-card__front">
                   <div class="product-card__image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1599909533601-b0453b4a8508?w=400&q=80" alt="Finely ground cumin powder with whole cumin seeds" loading="lazy" class="product-card__image" />
+                    <img src="assets/images/cumin.webp" alt="Finely ground cumin powder with whole cumin seeds" width="600" height="450" loading="lazy" class="product-card__image" />
                   </div>
                   <h3 class="product-card__name">Cumin Powder</h3>
                   <p class="product-card__tagline">Earthy. Smoky. Deep.</p>
@@ -576,11 +890,11 @@
             </article>
 
             <!-- Product 5: Chilli Powder -->
-            <article class="product-card" tabindex="0" aria-label="Chilli Powder — click to see details">
+            <article class="product-card" tabindex="0" role="button" aria-expanded="false" aria-label="Chilli Powder — click to see details">
               <div class="product-card__inner">
                 <div class="product-card__front">
                   <div class="product-card__image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1583119022894-919a68a3d0e3?w=400&q=80" alt="Deep red chilli powder made from naturally dried Indian red chillies" loading="lazy" class="product-card__image" />
+                    <img src="assets/images/chilli.webp" alt="Deep red chilli powder made from naturally dried Indian red chillies" width="600" height="450" loading="lazy" class="product-card__image" />
                   </div>
                   <h3 class="product-card__name">Chilli Powder</h3>
                   <p class="product-card__tagline">Fiery. Vibrant. Honest.</p>
@@ -598,11 +912,11 @@
             </article>
 
             <!-- Product 6: Cardamom -->
-            <article class="product-card" tabindex="0" aria-label="Cardamom — click to see details">
+            <article class="product-card" tabindex="0" role="button" aria-expanded="false" aria-label="Cardamom — click to see details">
               <div class="product-card__inner">
                 <div class="product-card__front">
                   <div class="product-card__image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" alt="Whole green cardamom pods from the cardamom farms of Kerala" loading="lazy" class="product-card__image" />
+                    <img src="assets/images/cardamom.webp" alt="Whole green cardamom pods from the cardamom farms of Kerala" width="600" height="450" loading="lazy" class="product-card__image" />
                   </div>
                   <h3 class="product-card__name">Cardamom</h3>
                   <p class="product-card__tagline">Fragrant. Precious. Luxurious.</p>
@@ -620,11 +934,11 @@
             </article>
 
             <!-- Product 7: Garam Masala -->
-            <article class="product-card" tabindex="0" aria-label="Garam Masala — click to see details">
+            <article class="product-card" tabindex="0" role="button" aria-expanded="false" aria-label="Garam Masala — click to see details">
               <div class="product-card__inner">
                 <div class="product-card__front">
                   <div class="product-card__image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" alt="Aromatic garam masala blend of naturally cultivated whole spices" loading="lazy" class="product-card__image" />
+                    <img src="assets/images/garam-masala.webp" alt="Aromatic garam masala blend of naturally cultivated whole spices" width="600" height="450" loading="lazy" class="product-card__image" />
                   </div>
                   <h3 class="product-card__name">Garam Masala</h3>
                   <p class="product-card__tagline">Complex. Warm. Signature.</p>
@@ -642,11 +956,11 @@
             </article>
 
             <!-- Product 8: Sambar Powder -->
-            <article class="product-card" tabindex="0" aria-label="Sambar Powder — click to see details">
+            <article class="product-card" tabindex="0" role="button" aria-expanded="false" aria-label="Sambar Powder — click to see details">
               <div class="product-card__inner">
                 <div class="product-card__front">
                   <div class="product-card__image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" alt="Traditional sambar powder blend for South Indian cooking" loading="lazy" class="product-card__image" />
+                    <img src="assets/images/sambar-powder.webp" alt="Traditional sambar powder blend for South Indian cooking" width="600" height="450" loading="lazy" class="product-card__image" />
                   </div>
                   <h3 class="product-card__name">Sambar Powder</h3>
                   <p class="product-card__tagline">Traditional. Robust. Comforting.</p>
@@ -664,11 +978,11 @@
             </article>
 
             <!-- Product 9: Rasam Powder -->
-            <article class="product-card" tabindex="0" aria-label="Rasam Powder — click to see details">
+            <article class="product-card" tabindex="0" role="button" aria-expanded="false" aria-label="Rasam Powder — click to see details">
               <div class="product-card__inner">
                 <div class="product-card__front">
                   <div class="product-card__image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" alt="Freshly ground rasam powder for traditional South Indian rasam" loading="lazy" class="product-card__image" />
+                    <img src="assets/images/rasam-powder.webp" alt="Freshly ground rasam powder for traditional South Indian rasam" width="600" height="450" loading="lazy" class="product-card__image" />
                   </div>
                   <h3 class="product-card__name">Rasam Powder</h3>
                   <p class="product-card__tagline">Tangy. Peppery. Soulful.</p>
@@ -686,11 +1000,11 @@
             </article>
 
             <!-- Product 10: Mustard Seeds -->
-            <article class="product-card" tabindex="0" aria-label="Mustard Seeds — click to see details">
+            <article class="product-card" tabindex="0" role="button" aria-expanded="false" aria-label="Mustard Seeds — click to see details">
               <div class="product-card__inner">
                 <div class="product-card__front">
                   <div class="product-card__image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" alt="Whole black mustard seeds for tempering in South Indian cuisine" loading="lazy" class="product-card__image" />
+                    <img src="assets/images/mustard-seeds.webp" alt="Whole black mustard seeds for tempering in South Indian cuisine" width="600" height="450" loading="lazy" class="product-card__image" />
                   </div>
                   <h3 class="product-card__name">Mustard Seeds</h3>
                   <p class="product-card__tagline">Sharp. Essential. Foundational.</p>
@@ -708,11 +1022,11 @@
             </article>
 
             <!-- Product 11: Fenugreek Seeds -->
-            <article class="product-card" tabindex="0" aria-label="Fenugreek Seeds — click to see details">
+            <article class="product-card" tabindex="0" role="button" aria-expanded="false" aria-label="Fenugreek Seeds — click to see details">
               <div class="product-card__inner">
                 <div class="product-card__front">
                   <div class="product-card__image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" alt="Whole fenugreek seeds, naturally cultivated for authentic flavour" loading="lazy" class="product-card__image" />
+                    <img src="assets/images/fenugreek-seeds.webp" alt="Whole fenugreek seeds, naturally cultivated for authentic flavour" width="600" height="450" loading="lazy" class="product-card__image" />
                   </div>
                   <h3 class="product-card__name">Fenugreek Seeds</h3>
                   <p class="product-card__tagline">Bitter. Warm. Medicinal.</p>

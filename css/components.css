@@ -12,11 +12,15 @@
   font-weight: 600;
   line-height: 1;
   padding: 14px var(--space-xl);
+  min-height: 44px;
   border-radius: 100px;
   cursor: pointer;
   transition: all var(--duration-normal) var(--ease-out);
   white-space: nowrap;
   border: 2px solid transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .btn--primary {
@@ -72,7 +76,7 @@
   border: 1.5px solid var(--color-highlight);
   border-radius: var(--radius-md);
   background-color: var(--color-bg);
-  font-size: var(--text-base);
+  font-size: 16px; /* Prevents auto-zoom on iOS Safari */
   color: var(--color-text);
   transition: border-color var(--duration-fast) var(--ease-out),
               box-shadow var(--duration-fast) var(--ease-out);

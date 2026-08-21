@@ -48,7 +48,7 @@ export function init() {
     }
 
     /* Show success (placeholder — swap with Netlify Forms or Formspree) */
-    status.textContent = 'Thank you! Your message has been sent. We'll get back to you soon.';
+    status.textContent = "Thank you! Your message has been sent. We'll get back to you soon.";
     status.classList.add('form-status--success');
     form.reset();
   });

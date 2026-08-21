@@ -32,7 +32,7 @@
   --space-5xl: 128px;
 
   /* Section vertical rhythm */
-  --section-pad-y: clamp(64px, 8vw, 120px);
+  --section-pad-y: clamp(40px, 5vw, 64px);
 
   /* Fonts */
   --font-heading: "Playfair Display", Georgia, serif;
@@ -43,12 +43,12 @@
   --text-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
   --text-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.875rem);
   --text-base: clamp(0.9rem, 0.85rem + 0.25vw, 1rem);
-  --text-lg: clamp(1rem, 0.9rem + 0.5vw, 1.15rem);
-  --text-xl: clamp(1.15rem, 1rem + 0.75vw, 1.35rem);
-  --text-2xl: clamp(1.4rem, 1.1rem + 1.5vw, 1.85rem);
-  --text-3xl: clamp(1.75rem, 1.3rem + 2.25vw, 2.5rem);
-  --text-4xl: clamp(2.2rem, 1.5rem + 3.5vw, 3.5rem);
-  --text-5xl: clamp(2.8rem, 1.8rem + 5vw, 4.5rem);
+  --text-lg: clamp(0.95rem, 0.85rem + 0.5vw, 1.15rem);
+  --text-xl: clamp(1.1rem, 0.95rem + 0.75vw, 1.35rem);
+  --text-2xl: clamp(1.25rem, 1.05rem + 1.2vw, 1.75rem);
+  --text-3xl: clamp(1.5rem, 1.2rem + 1.8vw, 2.25rem);
+  --text-4xl: clamp(1.85rem, 1.4rem + 2.5vw, 3.25rem);
+  --text-5xl: clamp(2.2rem, 1.6rem + 3.5vw, 4.25rem);
 
   /* Shared card chrome */
   --radius-sm: 6px;
