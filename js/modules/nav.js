@@ -30,7 +30,6 @@ export function init() {
   let ticking = false;
   let isProgrammaticScroll = false;
   let scrollSuspendTimer = null;
-  let scrollEndDebounceTimer = null;
   let currentActiveId = null;
 
   /* ── Active nav link styling ── */
@@ -50,63 +49,27 @@ export function init() {
     }
   }
 
-  /* ── Scroll-spy: calculate active section ── */
-  function updateActiveNavLink() {
-    const scrollY = window.scrollY || window.pageYOffset;
-    const viewportHeight = window.innerHeight;
-    const docHeight = Math.max(
-      document.body.scrollHeight,
-      document.documentElement.scrollHeight,
-      document.body.offsetHeight,
-      document.documentElement.offsetHeight
-    );
-
-    // Edge case 1: Top of page -> Home (#hero)
-    if (scrollY < 50) {
-      setActiveNavLink('hero');
-      return;
-    }
-
-    // Edge case 2: Scrolled to or near bottom of page -> Contact (#contact)
-    if (viewportHeight + scrollY >= docHeight - 50) {
-      setActiveNavLink('contact');
-      return;
-    }
-
-    // Section in viewport logic: reference offset below sticky header
-    const headerHeight = header.offsetHeight || 64;
-    const referenceY = Math.min(200, Math.max(headerHeight + 20, viewportHeight * 0.25));
-
-    let activeSectionId = null;
-
-    for (const section of sections) {
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= referenceY && rect.bottom > referenceY) {
-        activeSectionId = section.id;
-        break;
+  /* ── IntersectionObserver scroll spy ── */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !isProgrammaticScroll) {
+        const targetId = entry.target.id;
+        const mappedTarget = SECTION_MAP[targetId] || targetId;
+        setActiveNavLink(mappedTarget);
       }
-    }
+    });
+  }, { rootMargin: '-64px 0px -70% 0px' });
 
-    // Fallback: choose section closest to reference line
-    if (!activeSectionId && sections.length > 0) {
-      let closestDist = Infinity;
-      for (const section of sections) {
-        const rect = section.getBoundingClientRect();
-        const dist = Math.abs(rect.top - referenceY);
-        if (dist < closestDist) {
-          closestDist = dist;
-          activeSectionId = section.id;
-        }
-      }
-    }
+  sections.forEach(section => observer.observe(section));
 
-    if (activeSectionId) {
-      const mappedTarget = SECTION_MAP[activeSectionId] || activeSectionId;
-      setActiveNavLink(mappedTarget);
-    }
+  // Ensure active link is set on initial load if there's a hash
+  if (window.location.hash) {
+    const targetId = window.location.hash.slice(1);
+    const mappedTarget = SECTION_MAP[targetId] || targetId;
+    setActiveNavLink(mappedTarget);
   }
 
-  /* ── Sticky header shadow and scroll listener ── */
+  /* ── Sticky header shadow ── */
   function onScroll() {
     if (!ticking) {
       ticking = true;
@@ -116,17 +79,6 @@ export function init() {
         } else {
           header.classList.remove('site-header--scrolled');
         }
-
-        if (!isProgrammaticScroll) {
-          updateActiveNavLink();
-        } else {
-          // Debounce completion of programmatic scroll
-          if (scrollEndDebounceTimer) clearTimeout(scrollEndDebounceTimer);
-          scrollEndDebounceTimer = setTimeout(() => {
-            isProgrammaticScroll = false;
-          }, 120);
-        }
-
         ticking = false;
       });
     }
@@ -139,7 +91,6 @@ export function init() {
   function suspendScrollSpy(duration = 1000) {
     isProgrammaticScroll = true;
     if (scrollSuspendTimer) clearTimeout(scrollSuspendTimer);
-    if (scrollEndDebounceTimer) clearTimeout(scrollEndDebounceTimer);
 
     scrollSuspendTimer = setTimeout(() => {
       isProgrammaticScroll = false;
@@ -150,8 +101,6 @@ export function init() {
     if (isProgrammaticScroll) {
       isProgrammaticScroll = false;
       if (scrollSuspendTimer) clearTimeout(scrollSuspendTimer);
-      if (scrollEndDebounceTimer) clearTimeout(scrollEndDebounceTimer);
-      updateActiveNavLink();
     }
   }
 
