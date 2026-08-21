@@ -590,6 +590,15 @@ main > section[id] {
   flex-shrink: 0;
 }
 
+.founder-card__photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
 .founder-card__photo-placeholder {
   width: 64px;
   height: 64px;
