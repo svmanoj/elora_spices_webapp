@@ -714,24 +714,45 @@ main > section[id] {
 /* ─── VISION & MISSION ─── */
 
 .vision-mission {
+  padding: 0;
+  background: none;
+}
+
+.vision-mission__statement {
+  background-color: var(--color-primary-dark);
   padding-block: var(--section-pad-y);
-  background: linear-gradient(180deg, var(--color-primary-dark) 0%, var(--color-primary-dark) 60%, var(--color-bg) 60%);
 }
 
 .vision-mission__grid {
   display: grid;
   gap: var(--space-lg);
-  margin-bottom: var(--space-3xl);
 }
 
 .vision-card {
   background-color: var(--color-surface);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
+  display: flex;
+  flex-direction: column;
+}
+
+.vision-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .vision-card__icon-wrapper {
-  margin-bottom: var(--space-md);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-highlight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+  flex-shrink: 0;
 }
 
 .vision-card__label {
@@ -759,10 +780,27 @@ main > section[id] {
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
   color: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .mission-card__icon-wrapper {
-  margin-bottom: var(--space-md);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+  flex-shrink: 0;
 }
 
 .mission-card__label {
@@ -790,11 +828,16 @@ main > section[id] {
 }
 
 /* Principles */
+.vision-mission__principles {
+  background-color: var(--color-bg);
+  padding-block: var(--section-pad-y);
+}
+
 .principles__heading {
   font-size: var(--text-2xl);
   text-align: center;
   margin-bottom: var(--space-xl);
-  color: var(--color-surface);
+  color: var(--color-primary-dark);
 }
 
 .principles__grid {
@@ -810,11 +853,12 @@ main > section[id] {
   align-items: flex-start;
   gap: var(--space-md);
   box-shadow: var(--shadow-card);
-  transition: transform var(--duration-normal) var(--ease-out);
+  transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
 }
 
 .principle-card:hover {
   transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .principle-card__icon {
