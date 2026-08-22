@@ -101,6 +101,14 @@ main > section[id] {
   flex-shrink: 0;
 }
 
+.nav__logo-icon {
+  width: auto;
+  height: 48px;
+  max-height: 48px;
+  object-fit: contain;
+  display: block;
+}
+
 .nav__logo-text {
   font-family: var(--font-heading);
   font-size: var(--text-xl);
@@ -1208,6 +1216,15 @@ main > section[id] {
   align-items: center;
   gap: var(--space-sm);
   margin-bottom: var(--space-md);
+}
+
+.footer__logo-icon {
+  width: auto;
+  height: 48px;
+  max-height: 48px;
+  object-fit: contain;
+  display: block;
+  filter: brightness(1.12) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
 }
 
 .footer__logo-text {
