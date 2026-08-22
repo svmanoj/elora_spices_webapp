@@ -107,11 +107,6 @@ main > section[id] {
   max-height: 48px;
   object-fit: contain;
   display: block;
-  transition: transform var(--duration-fast) var(--ease-out);
-}
-
-.nav__logo:hover .nav__logo-icon {
-  transform: scale(1.05);
 }
 
 .nav__logo-text {
