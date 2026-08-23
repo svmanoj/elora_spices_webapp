@@ -13,6 +13,22 @@ export function init() {
     }
     card.setAttribute('aria-expanded', 'false');
 
+    /* Touch tilt: brief rotateY on finger-down to signal interactivity */
+    if ('ontouchstart' in window) {
+      card.addEventListener('touchstart', () => {
+        if (!card.classList.contains(FLIPPED_CLASS)) {
+          card.querySelector('.product-card__inner').style.transform = 'rotateY(30deg)';
+        }
+      }, { passive: true });
+
+      const resetTilt = () => {
+        const inner = card.querySelector('.product-card__inner');
+        inner.style.transform = '';
+      };
+      card.addEventListener('touchend', resetTilt, { passive: true });
+      card.addEventListener('touchcancel', resetTilt, { passive: true });
+    }
+
     /* Click / Touch tap to flip */
     card.addEventListener('click', () => {
       const isFlipped = card.classList.toggle(FLIPPED_CLASS);

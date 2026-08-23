@@ -4,12 +4,11 @@
 Scan clean. Two tasks defined: persistent icon (CSS-only) and peek animation (JS).
 
 ## Todos
-- [x] Task 1: Add persistent affordance icon (CSS `::after` pseudo-element)
-- [x] Task 2: Add one-time peek animation (JS in card-flip.js)
-- [x] Task 3: Final verification & ledger update (commit `08a27e5`)
+- [x] Task 1: Add persistent affordance — touch tilt + scroll peek (commit `4e3a8c7`)
+- [x] Task 2: Final verification & ledger update (commit `4e3a8c7`)
 
 ## Rulings
-- **Ruling:** Flip-hint icon uses CSS `::after` pseudo-element on `.product-card__front` — zero extra HTML markup, no duplication across 11 cards.
+- **Ruling:** Touch affordance uses 30deg rotateY tilt on `.product-card__inner` via inline style — no class conflict with flip toggle.
 - **Ruling:** Peek animation gated via `sessionStorage('productCardPeekDone')` — fires exactly once per browser session.
-- **Ruling:** `prefers-reduced-motion: reduce` check skips peek animation entirely; icon remains visible.
+- **Ruling:** `prefers-reduced-motion: reduce` check skips peek animation entirely; tilt remains functional.
 - **Ruling:** No existing card-flip.js handlers were modified — all changes are additive.
