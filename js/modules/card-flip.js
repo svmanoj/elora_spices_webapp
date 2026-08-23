@@ -57,4 +57,35 @@ export function init() {
       });
     }
   });
+
+  /* One-time peek animation: flip first card briefly on first scroll into view */
+  if (
+    !sessionStorage.getItem('productCardPeekDone') &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  ) {
+    const grid = document.querySelector('.products__grid');
+    if (grid) {
+      const peekObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const firstCard = grid.querySelector('.product-card');
+              if (firstCard) {
+                firstCard.classList.add(FLIPPED_CLASS);
+                firstCard.setAttribute('aria-expanded', 'true');
+                setTimeout(() => {
+                  firstCard.classList.remove(FLIPPED_CLASS);
+                  firstCard.setAttribute('aria-expanded', 'false');
+                }, 700);
+              }
+              sessionStorage.setItem('productCardPeekDone', '1');
+              peekObserver.disconnect();
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+      peekObserver.observe(grid);
+    }
+  }
 }
