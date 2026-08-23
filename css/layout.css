@@ -98,7 +98,8 @@ main > section[id] {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  flex-shrink: 0;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .nav__logo-icon {
@@ -107,6 +108,7 @@ main > section[id] {
   max-height: 48px;
   object-fit: contain;
   display: block;
+  flex-shrink: 0;
 }
 
 .nav__logo-text {
@@ -114,6 +116,7 @@ main > section[id] {
   font-size: var(--text-xl);
   font-weight: 700;
   color: var(--color-primary-dark);
+  white-space: nowrap;
 }
 
 .nav__links {
@@ -152,7 +155,7 @@ main > section[id] {
   width: 100%;
 }
 
-.nav__cta {
+.nav .nav__cta {
   display: none;
 }
 
@@ -174,6 +177,15 @@ main > section[id] {
   border: none;
   cursor: pointer;
   touch-action: manipulation;
+  flex-shrink: 0;
+}
+
+/*
+ * When the drawer is open, elevate the entire header so it sits above 
+ * the full-screen drawer overlay (z-200), keeping the logo and close button visible.
+ */
+.body--drawer-open .site-header {
+  z-index: calc(var(--z-drawer) + 1);
 }
 
 .nav__hamburger-line {
@@ -1365,7 +1377,7 @@ main > section[id] {
     display: flex;
   }
 
-  .nav__cta {
+  .nav .nav__cta {
     display: inline-flex;
   }
 
