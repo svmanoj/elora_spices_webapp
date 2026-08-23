@@ -47,10 +47,29 @@ export function init() {
       return;
     }
 
-    /* Show success (placeholder — swap with Netlify Forms or Formspree) */
-    status.textContent = "Thank you! Your message has been sent. We'll get back to you soon.";
-    status.classList.add('form-status--success');
-    form.reset();
+    /* Submit to Formspree */
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { Accept: 'application/json' }
+    })
+      .then((response) => {
+        if (response.ok) {
+          status.textContent = "Thank you! Your message has been sent. We'll get back to you soon.";
+          status.classList.add('form-status--success');
+          form.reset();
+        } else {
+          response.json().then((data) => {
+            status.textContent = data.errors?.[0]?.message || 'Something went wrong. Please try again.';
+            status.classList.add('form-status--error');
+          });
+        }
+      })
+      .catch(() => {
+        status.textContent = 'Network error. Please check your connection and try again.';
+        status.classList.add('form-status--error');
+      });
   });
 
   /* Live validation — clear error on input */
