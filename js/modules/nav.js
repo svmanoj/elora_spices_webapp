@@ -116,6 +116,7 @@ export function init() {
   function openDrawer() {
     hamburger.classList.add('nav__hamburger--open');
     hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', 'Close menu');
     drawer.classList.add('mobile-drawer--open');
     drawer.setAttribute('aria-hidden', 'false');
     document.body.classList.add('body--drawer-open');
@@ -124,6 +125,7 @@ export function init() {
   function closeDrawer() {
     hamburger.classList.remove('nav__hamburger--open');
     hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Open menu');
     drawer.classList.remove('mobile-drawer--open');
     drawer.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('body--drawer-open');
