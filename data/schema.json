@@ -1,0 +1,220 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://eloraspices.com/#organization",
+      "name": "Elora Spices",
+      "url": "https://eloraspices.com",
+      "logo": "https://eloraspices.com/assets/images/logo.png",
+      "image": "https://eloraspices.com/assets/images/og-image.jpg",
+      "description": "Naturally cultivated, carefully sourced, and freshly packed agricultural products from South India's finest farms.",
+      "foundingDate": "2011",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "Jeevan",
+          "jobTitle": "Co-Founder, Brand & Business Development",
+          "image": "https://eloraspices.com/assets/images/founder-jeevan.webp"
+        },
+        {
+          "@type": "Person",
+          "name": "Balaji",
+          "jobTitle": "Co-Founder, Quality & Responsible Practices",
+          "image": "https://eloraspices.com/assets/images/founder-balaji.jpg"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Kerala & Tamil Nadu",
+        "addressCountry": "IN"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-98765-43210",
+          "contactType": "customer service",
+          "email": "shop.eloraspices@outlook.com",
+          "availableLanguage": ["English", "Tamil", "Malayalam", "Hindi"]
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/elora.spices",
+        "https://wa.me/919840943616"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://eloraspices.com/#website",
+      "url": "https://eloraspices.com",
+      "name": "Elora Spices",
+      "description": "Naturally cultivated, carefully sourced, and freshly packed agricultural products from South India.",
+      "publisher": {
+        "@id": "https://eloraspices.com/#organization"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://eloraspices.com/#products",
+      "name": "Elora Spices Product Catalog",
+      "description": "Naturally cultivated spices and agricultural products from South India.",
+      "numberOfItems": 11,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Product",
+            "name": "Coffee",
+            "description": "A rich brew from carefully selected beans, grown in estate conditions that respect the natural growing environment. Elora Spices sources coffee with attention to bean quality, aroma and freshness — bringing you a cup rooted in responsible cultivation.",
+            "image": "https://eloraspices.com/assets/images/coffee.webp",
+            "brand": { "@type": "Brand", "name": "Elora Spices" },
+            "category": "Agricultural Products / Beverages",
+            "countryOfOrigin": "IN",
+            "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "name": "Green Tea",
+            "description": "Plucked at the right stage to preserve its delicate character, green tea represents the careful balance between nature and craft. Our green tea is selected for its freshness, natural colour and quality — a gentle brew that reflects the farm it came from.",
+            "image": "https://eloraspices.com/assets/images/green_tea.webp",
+            "brand": { "@type": "Brand", "name": "Elora Spices" },
+            "category": "Agricultural Products / Beverages",
+            "countryOfOrigin": "IN",
+            "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Product",
+            "name": "Cardamom",
+            "description": "The Queen of Spices. Grown in the misty hills of South India, cardamom pods are harvested by hand at peak ripeness. Elora Spices selects cardamom for its intense aroma, natural green colour and quality — bringing warmth and fragrance to your kitchen and beverages.",
+            "image": "https://eloraspices.com/assets/images/cardamom.webp",
+            "brand": { "@type": "Brand", "name": "Elora Spices" },
+            "category": "Agricultural Products / Spices",
+            "countryOfOrigin": "IN",
+            "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Product",
+            "name": "Broken Black Tea",
+            "description": "Full-bodied and brisk, broken black tea is the everyday brew rooted in generations of tea estate tradition. Carefully selected for its strength, colour and natural character, this is tea that connects you directly to the estate and the hands that harvested it.",
+            "image": "https://eloraspices.com/assets/images/broken_black_tea.webp",
+            "brand": { "@type": "Brand", "name": "Elora Spices" },
+            "category": "Agricultural Products / Beverages",
+            "countryOfOrigin": "IN",
+            "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Product",
+            "name": "Orthodox Black Tea",
+            "description": "Whole-leaf, carefully processed orthodox black tea — a premium, slow-crafted brew that preserves the natural complexity of the leaf. Selected for its aroma, liquor quality and natural character, this represents the art of traditional tea production.",
+            "image": "https://eloraspices.com/assets/images/orthodox_black_tea.webp",
+            "brand": { "@type": "Brand", "name": "Elora Spices" },
+            "category": "Agricultural Products / Beverages",
+            "countryOfOrigin": "IN",
+            "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Product",
+            "name": "Cloves",
+            "description": "Harvested before they bloom, cloves carry an intense, warm aroma that has defined spice culture for centuries. At Elora Spices, we select cloves with attention to their natural oil content, aroma and appearance — a spice that brings depth to both cooking and wellness.",
+            "image": "https://eloraspices.com/assets/images/cloves.webp",
+            "brand": { "@type": "Brand", "name": "Elora Spices" },
+            "category": "Agricultural Products / Spices",
+            "countryOfOrigin": "IN",
+            "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Product",
+            "name": "Nutmeg",
+            "description": "The richly aromatic seed of the nutmeg tree, carefully harvested and dried to preserve its natural character. Nutmeg adds warmth, depth and complexity to culinary creations. Elora Spices sources nutmeg with a focus on quality, aroma and responsible cultivation.",
+            "image": "https://eloraspices.com/assets/images/nutmeg.webp",
+            "brand": { "@type": "Brand", "name": "Elora Spices" },
+            "category": "Agricultural Products / Spices",
+            "countryOfOrigin": "IN",
+            "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Product",
+            "name": "Black Pepper",
+            "description": "The King of Spices. Bold by Nature. Black pepper vines produce clusters of berries carefully harvested and processed to preserve their natural heat and aroma. Selected from trusted farming communities, our pepper represents the farmer, the soil and the journey from cultivation to your kitchen.",
+            "image": "https://eloraspices.com/assets/images/black_pepper.webp",
+            "brand": { "@type": "Brand", "name": "Elora Spices" },
+            "category": "Agricultural Products / Spices",
+            "countryOfOrigin": "IN",
+            "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "Product",
+            "name": "Turmeric",
+            "description": "Golden in colour, powerful in purpose. Turmeric is one of the most valued agricultural products from Indian farming tradition. Elora Spices selects turmeric for its natural colour, curcumin character and freshness — a root that connects food, farming and wellness.",
+            "image": "https://eloraspices.com/assets/images/turmeric.webp",
+            "brand": { "@type": "Brand", "name": "Elora Spices" },
+            "category": "Agricultural Products / Spices",
+            "countryOfOrigin": "IN",
+            "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "Product",
+            "name": "Cinnamon",
+            "description": "True cinnamon — delicate, sweet and aromatic — harvested from the inner bark of the cinnamon tree. Carefully selected for its natural curl, freshness and aroma, our cinnamon brings warmth and character to beverages, baking and culinary traditions across cultures.",
+            "image": "https://eloraspices.com/assets/images/cinnamon.webp",
+            "brand": { "@type": "Brand", "name": "Elora Spices" },
+            "category": "Agricultural Products / Spices",
+            "countryOfOrigin": "IN",
+            "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "item": {
+            "@type": "Product",
+            "name": "Mace",
+            "description": "The lacy red covering of the nutmeg seed, mace is one of the rarest and most prized spices in Indian agriculture. Delicate in appearance but complex in aroma, mace is carefully dried and selected by Elora Spices for its quality, colour and natural character.",
+            "image": "https://eloraspices.com/assets/images/mace.webp",
+            "brand": { "@type": "Brand", "name": "Elora Spices" },
+            "category": "Agricultural Products / Spices",
+            "countryOfOrigin": "IN",
+            "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR" }
+          }
+        }
+      ]
+    }
+  ]
+}
