@@ -13,6 +13,22 @@ export function init() {
     }
     card.setAttribute('aria-expanded', 'false');
 
+    /* Touch tilt: brief rotateY on finger-down to signal interactivity */
+    if ('ontouchstart' in window) {
+      card.addEventListener('touchstart', () => {
+        if (!card.classList.contains(FLIPPED_CLASS)) {
+          card.querySelector('.product-card__inner').style.transform = 'rotateY(30deg)';
+        }
+      }, { passive: true });
+
+      const resetTilt = () => {
+        const inner = card.querySelector('.product-card__inner');
+        inner.style.transform = '';
+      };
+      card.addEventListener('touchend', resetTilt, { passive: true });
+      card.addEventListener('touchcancel', resetTilt, { passive: true });
+    }
+
     /* Click / Touch tap to flip */
     card.addEventListener('click', () => {
       const isFlipped = card.classList.toggle(FLIPPED_CLASS);
@@ -57,4 +73,35 @@ export function init() {
       });
     }
   });
+
+  /* One-time peek animation: flip first card briefly on first scroll into view */
+  if (
+    !sessionStorage.getItem('productCardPeekDone') &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  ) {
+    const grid = document.querySelector('.products__grid');
+    if (grid) {
+      const peekObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const firstCard = grid.querySelector('.product-card');
+              if (firstCard) {
+                firstCard.classList.add(FLIPPED_CLASS);
+                firstCard.setAttribute('aria-expanded', 'true');
+                setTimeout(() => {
+                  firstCard.classList.remove(FLIPPED_CLASS);
+                  firstCard.setAttribute('aria-expanded', 'false');
+                }, 700);
+              }
+              sessionStorage.setItem('productCardPeekDone', '1');
+              peekObserver.disconnect();
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+      peekObserver.observe(grid);
+    }
+  }
 }
