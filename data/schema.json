@@ -19,8 +19,9 @@
         },
         {
           "@type": "Person",
-          "name": "Balaji",
+          "name": "Dr Balaji",
           "jobTitle": "Co-Founder, Quality & Responsible Practices",
+          "honorificPrefix": "Dr",
           "image": "https://eloraspices.com/assets/images/founder-balaji.jpg"
         }
       ],
