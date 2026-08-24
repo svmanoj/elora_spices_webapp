@@ -1230,13 +1230,21 @@ main > section[id] {
   margin-bottom: var(--space-md);
 }
 
+/* Ivory medallion: the emblem is deep green on a transparent background, so it
+   vanishes against the dark footer. Seating it on a cream disc with a fine gold
+   ring keeps the original brand colors visible and reads like a wax seal. */
 .footer__logo-icon {
-  width: auto;
-  height: 48px;
-  max-height: 48px;
+  width: 45px;
+  height: 45px;
+  padding: 6px;
   object-fit: contain;
   display: block;
-  filter: brightness(1.12) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  background: radial-gradient(circle at 32% 26%, #fffdf6 0%, #f3eddd 100%);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px rgba(201, 162, 39, 0.6),
+    0 0 0 4px rgba(201, 162, 39, 0.18),
+    0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
 .footer__logo-text {
