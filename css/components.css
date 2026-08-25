@@ -51,6 +51,17 @@
   width: 100%;
 }
 
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.85;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn--locked {
+  pointer-events: none;
+}
+
 /* ─── Form Elements ─── */
 
 .form-group {
@@ -124,6 +135,43 @@
 
 .form-status--error {
   color: #D32F2F;
+}
+
+.form-toast {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  z-index: 2000;
+  max-width: min(420px, calc(100vw - 32px));
+  padding: 14px 24px;
+  border-radius: 12px;
+  background: rgba(17, 24, 39, 0.96);
+  color: var(--color-surface);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--duration-normal) var(--ease-out),
+              transform var(--duration-normal) var(--ease-out),
+              visibility var(--duration-normal) var(--ease-out);
+  pointer-events: none;
+}
+
+.form-toast--visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  visibility: visible;
+}
+
+.form-toast--success {
+  background: rgba(11, 107, 74, 0.96);
+}
+
+.form-toast--error {
+  background: rgba(211, 47, 47, 0.96);
 }
 
 /* ─── Scroll reveal (used by scroll-animations.js) ─── */
