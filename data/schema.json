@@ -68,7 +68,7 @@
             "@type": "Product",
             "name": "Coffee",
             "description": "A rich brew from carefully selected beans, grown in estate conditions that respect the natural growing environment. Elora Spices sources coffee with attention to bean quality, aroma and freshness — bringing you a cup rooted in responsible cultivation.",
-            "image": "https://eloraspices.com/assets/images/coffee.webp",
+            "image": "https://eloraspices.com/assets/images/coffee.jpeg",
             "brand": { "@type": "Brand", "name": "Elora Spices" },
             "category": "Agricultural Products / Beverages",
             "countryOfOrigin": "IN",
