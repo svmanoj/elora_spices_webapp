@@ -1,0 +1,33 @@
+# ─── Cloudflare Pages: Cache-Control Headers ───
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+# Images — immutable assets, cache for 1 year
+/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Icons
+/assets/icons/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS — cache for 1 week (may change between deploys)
+/css/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# JS — cache for 1 week
+/js/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Fonts (if any are added later)
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Favicon
+/assets/images/favicon.*
+  Cache-Control: public, max-age=2592000
+
+# HTML pages — always revalidate (short cache + stale-while-revalidate)
+/
+  Cache-Control: public, max-age=300, stale-while-revalidate=3600
+
+/index.html
+  Cache-Control: public, max-age=300, stale-while-revalidate=3600
