@@ -41,7 +41,6 @@ elora-spices-website/
 3. `layout.css` — page structure, container, sticky nav, breakpoints
 4. `components.css` — reusable UI blocks
 5. `animations.css` — keyframes, transitions, motion
-
 **JavaScript:** `js/main.js` is the only entry point (`type="module"`, `defer`). It imports each file under `js/modules/` and calls that module's `init()` on `DOMContentLoaded`. Feature modules do not import each other and do not assign to `window`. Init order: nav → hero-carousel → card-flip → scroll-animations → form-handler.
 
 Serve the site over HTTP (for example `npx serve .`) so ES modules load; `file://` often blocks them.
