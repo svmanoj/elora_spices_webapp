@@ -457,8 +457,17 @@ main > section[id] {
 /* ─── NATURAL FARMING ─── */
 
 .natural-farming {
-  padding-block: var(--section-pad-y);
+  padding-block: clamp(32px, 4vw, 52px);
   background-color: var(--color-highlight);
+}
+
+.natural-farming .section-heading {
+  margin-bottom: var(--space-sm);
+}
+
+.natural-farming .section-intro {
+  margin-bottom: var(--space-2xl);
+  font-size: var(--text-base);
 }
 
 .natural-farming__grid {
@@ -1406,6 +1415,10 @@ main > section[id] {
   .natural-farming__grid {
     grid-template-columns: 1fr 1fr;
     align-items: start;
+  }
+
+  .natural-farming__photo {
+    aspect-ratio: 15 / 16;
   }
 
   .journey__steps {
